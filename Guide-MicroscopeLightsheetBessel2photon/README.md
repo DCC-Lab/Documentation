@@ -1,2 +1,3 @@
 # Documentation
-Toute documentation pour le groupe
+# User Guide: Lightsheet Bessel 2-photon Microscope
+a latex document
