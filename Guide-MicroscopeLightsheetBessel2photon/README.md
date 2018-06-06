@@ -1,7 +1,7 @@
 # Documentation
 # User Guide: Lightsheet Bessel 2-photon Microscope
 a latex document
-1. Connect to sharelatex account or v2.overleaf account.
+1. Login to your sharelatex or v2.overleaf account.
 2. Click on 'New Project' --> 'Import from GitHub'.
 3. Follow the instructions.
 4. When asked, click on 'Request' next to 'DCC-Lab'. Daniel has to accept your request.
