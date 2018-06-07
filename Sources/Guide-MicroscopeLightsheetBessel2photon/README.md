@@ -1,6 +1,7 @@
 # Documentation
 # User Guide: Lightsheet Bessel 2-photon Microscope
 a latex document
+## How to link GitHub to your LaTex account
 1. Login to your sharelatex or v2.overleaf account.
 2. Click on 'New Project' --> 'Import from GitHub'.
 3. Follow the instructions.
