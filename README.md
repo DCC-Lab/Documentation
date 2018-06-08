@@ -6,7 +6,7 @@ Put its editable file in a folder of the same name. Put this folder in folder 'S
 ## PDF doc name structure
 Has to be {type}-{subject}.  
 Examples: Guide-2photonMicroscope, Summary-HiLo  
-PDF doc and its associated folder have to have the same name.
+**PDF doc and its associated folder have to have the same name.
 ## How to link GitHub to your LaTex account
 1. Go to v2.overleaf.com. 
 2. Log in with a Overleaf account (not Sharelatex).
