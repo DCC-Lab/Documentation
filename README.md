@@ -2,9 +2,7 @@
 Toute documentation pour le groupe
 ## File name structure
 {type}-{subject}  
-Examples: 
-  Guide-2photonMicroscope
-  Summary-HiLo
+Examples: Guide-2photonMicroscope, Summary-HiLo
 ## Organisation
 The PDF doc is on the start page.  
 Its editable file is in a folder of the same name. This folder is in folder 'Sources'.
