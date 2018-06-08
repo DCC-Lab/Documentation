@@ -4,7 +4,7 @@ Toute documentation pour le groupe
 Put the PDF doc on the start page. 
 Put its editable file in a folder of the same name. Put this folder in folder 'Sources'.
 ## PDF doc name structure
-Has to be {type}-{subject}.
+Has to be {type}-{subject}.  
 Examples: Guide-2photonMicroscope, Summary-HiLo
 PDF doc and its associated folder have to have the same name.
 ## How to link GitHub to your LaTex account
