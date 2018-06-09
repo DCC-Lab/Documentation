@@ -15,6 +15,6 @@ Examples: Guide-2photonMicroscope, Summary-HiLo
 5. When asked, click on 'Request' next to all repositories you would like to have access to from your latex account. You should not need to request 'DCC-Lab' since Daniel has already given access to all people in DCC-Lab organization.
 6. Authorise access.
 7. Go back.
-8. Redo step 2. 
+8. Redo step 3. 
 9. Now all your available repositories should be listed. Click on 'Import to ###' next to the repository you want.
 10. To push and pull, go to 'Menu' --> 'Sync' --> 'GitHub'.
