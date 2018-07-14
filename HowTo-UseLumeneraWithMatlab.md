@@ -4,25 +4,25 @@
 
 2. Run 'install.bat' by either:  
     * double-clicking it in a Windows Explorer window. A command window will open. Enter option ‘2’ (for Matlab 2010 and later versions and with windows 32 bits). The command window will close pretty quickly. Nevertheless try to get if this message is displayed:  
-    ```
-    The message
-    ```
+        ```
+        The message
+        ```
     * or by opening a Command Promp window and typing the following:  
-    ```
-    C:
-    cd "\Lumenera Matlab Plugin"
-    install <option>
-    ```
+        ```
+        C:
+        cd "\Lumenera Matlab Plugin"
+        install <option>
+        ```
     where <option> is 2 (for Matlab 2010 and later versions and with windows 32 bits).  
   
 New files should be created in the directory 'C:\Lumenera MatLab Plugin'.
   
 3. Now open Matlab 2017a. Use the following commands:
-```
-imaqregister('C:\Lumenera MatLab Plugin\lumeneraimaq.dll');
-imaqreset
-```
-This should not create any errors. However, it is normal if at Matlab toolbar->Apps->Image Toolbox, it is showed no plug-ins are detected. Close Matlab.
+    ```
+    imaqregister('C:\Lumenera MatLab Plugin\lumeneraimaq.dll');
+    imaqreset
+    ```
+    This should not create any errors. However, it is normal if at Matlab toolbar->Apps->Image Toolbox, it is showed no plug-ins are detected. Close Matlab.
 
 4. Run 'install.bat' like at step 2 expept by choosing option 3 (Matlab 2010 and later versions for WIndows 64 bits).
 
