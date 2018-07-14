@@ -1,6 +1,6 @@
 # How to use Lumenera camera with Matlab
 
-1. Extract files from the zip file 'MATLAB Image Acquisition v 2.0.1' into a directory of your choice, such as 'C:\Lumenera MatLab Plugin'. You can also download the [zip file](https://www.lumenera.com/matlab-image-acquisition.html). Make sure to choose version 2.0.1.
+1. Extract files from the zip file 'MATLAB Image Acquisition v 2.0.1' into a directory of your choice, such as 'C:\Lumenera MatLab Plugin'. You can also download the zip file [here](https://www.lumenera.com/matlab-image-acquisition.html). Make sure to choose version 2.0.1.
 
 2. Run 'install.bat' by either:  
     * double-clicking it in a Windows Explorer window. A command window will open. Enter option ‘2’ (for Matlab 2010 and later versions and with windows 32 bits). The command window will close pretty quickly. Nevertheless try to get if this message is displayed:  
@@ -14,6 +14,7 @@
     install <option>
     ```
     where <option> is 2 (for Matlab 2010 and later versions and with windows 32 bits).  
+  
 New files should be created in the directory 'C:\Lumenera MatLab Plugin'.
   
 3. Now open Matlab 2017a. Use the following commands:
