@@ -15,7 +15,7 @@
         ```
     where <option> is 2 (for Matlab 2010 and later versions and with windows 32 bits).  
   
-New files should be created in the directory 'C:\Lumenera MatLab Plugin'.
+    New files should be created in the directory 'C:\Lumenera MatLab Plugin'.
   
 3. Now open Matlab 2017a. Use the following commands:
     ```
