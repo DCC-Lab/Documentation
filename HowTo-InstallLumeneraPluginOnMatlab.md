@@ -24,7 +24,7 @@
     ```
     This should not create any errors. However, it is normal if at Matlab toolbar->Apps->Image Toolbox, it is showed no plug-ins are detected. Close Matlab.
 
-4. Run 'install.bat' like at step 2 expept by choosing option 3 (Matlab 2010 and later versions for WIndows 64 bits).
+4. Run 'install.bat' like at step 2 expept by choosing option _3_ (Matlab 2010 and later versions for WIndows 64 bits).
 
 5. Repeat step 3. Now if you go to Matlab toolbar->Apps->Image Toolbox, the plug-in 'lumeneraimaq' should be detected.
 
