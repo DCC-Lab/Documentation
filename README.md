@@ -1,5 +1,6 @@
 # Documentation
 Any documentation for the group. The preferred format is markdown.  A good editor is available here: https://typora.io
+Markdown is the best because it can be edited and viewed anywhere, is lightweight and simple.
 
 Not everything is a good document name! Here they are:
 
