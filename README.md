@@ -1,13 +1,21 @@
 # Documentation
-Toute documentation pour le groupe
+Any documentation for the group. The preferred format is markdown.  A good editor is available here: https://typora.io
+
 ## Organisation of this repository
-Put the PDF doc on the start page. 
-Put its editable file in a folder of the same name. Put this folder in folder 'Sources'.
-## PDF doc name structure
+1. If using LaTeX, Pages, Word, microsoft Paint, excel whatever:
+   1.  Put the PDF doc on the start page. 
+   2.  Put its editable file in a folder of the same name. Put this folder in folder 'Sources'.
+2. Markdown does not need a PDF
+
+## Document name structure
 Has to be {type}-{subject}.  
 Examples: Guide-2photonMicroscope, Summary-HiLo  
-**PDF doc and its associated folder have to have the same name.
-## How to link GitHub to your LaTex account
+
+**PDF doc and its associated folder must have the same name.**
+
+## Editors and links with Github
+
+### LaTeX: How to link GitHub to your LaTex account
 1. Go to v2.overleaf.com. 
 2. Log in with a Overleaf account (not Sharelatex).
 3. Click on 'New Project' --> 'Import from GitHub'.
