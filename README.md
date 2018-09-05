@@ -3,9 +3,10 @@ Any documentation for the group. The preferred format is markdown.  A good edito
 
 Not everything is a good document name! Here they are:
 
-1. Protocol: describes the technical steps to complete a small task in the laboratory
 2. Guide: describes a system: components and how to use/troubleshoot it.
 3. HOWTO: a describes the exact steps to get something done, usually related to a computer
+1. Protocol: describes the technical steps to complete a small task in the laboratory
+4. Summary: summarizes an article, book or general concepts
 
 ## Organisation of this repository
 1. If using LaTeX, Pages, Word, microsoft Paint, excel whatever:
