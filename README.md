@@ -1,25 +1,24 @@
 # Documentation
-Any documentation for the group. The preferred format is markdown.  A good editor is available here: https://typora.io
-Markdown is the best because it can be edited and viewed anywhere, is lightweight and simple.
-
-Not everything is a good document name! Here they are:
-
-1. Guide: describes a system: components and how to use/troubleshoot it.
-3. HOWTO: a describes the exact steps to get something done, usually related to a computer
-1. Protocol: describes the technical steps to complete a small task in the laboratory
-4. Summary: summarizes an article, book or general concepts
+You will find here any documentation for the group. The preferred format is markdown.  An excellent editor is available here: https://typora.io Markdown is the best because it can be edited and viewed anywhere, including GitHub, is lightweight and simple. Typora supports LaTeX equations. Use Markdown. 
 
 ## Organisation of this repository
+
+### Filenames
+There is structure to our chaos. Filenames are strictly enforced for clarity. Filenames must be `CATEGORY-Title`. Not everything is a good document name. `CATGEORY` is one of:
+
+1. *GUIDE*: Describes a system and how to use/troubleshoot it.
+2. *HOWTO*: Describes the **exact steps** to get something done, usually related to a computer but can be anything
+3. *PROTOCOL*: Describes the **technical steps** to complete a small task **in the laboratory**
+4. *TECHREP*: Explains or summarizes an article, book or general concepts
+
+A `Title` is anything informative and short.
+
+### Sources
+
 1. If using LaTeX, Pages, Word, microsoft Paint, excel whatever:
    1.  Put the PDF doc on the start page. 
    2.  Put its editable file in a folder of the same name. Put this folder in folder 'Sources'.
 2. Markdown does not need a PDF
-
-## Document name structure
-Has to be {type}-{subject}.  
-Examples: Guide-2photonMicroscope, Summary-HiLo  
-
-**PDF doc and its associated folder must have the same name.**
 
 ## Editors and links with Github
 
