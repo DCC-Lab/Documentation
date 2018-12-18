@@ -1,5 +1,11 @@
 # Documentation
-You will find here any documentation for the group. The preferred format is markdown.  An excellent editor is available here: https://typora.io Markdown is the best because it can be edited and viewed anywhere, including GitHub, is lightweight and simple. Typora supports LaTeX equations. Use Markdown. 
+> Incomplete and imperfect documentation today is better than perfect documentation that never materializes.
+>
+> -Unknown
+
+
+
+You will find [here](https://github.com/DCC-Lab/Documentation) any documentation for the group. The preferred format is markdown.  An excellent editor is available here: https://typora.io. Markdown is the best because it can be edited and viewed anywhere, including GitHub, is lightweight and simple. Typora supports LaTeX equations. Use Markdown. 
 
 ## Organisation of this repository
 
@@ -19,6 +25,19 @@ A `Title` is anything informative and short.
    1.  Put the PDF doc on the start page. 
    2.  Put its editable file in a folder of the same name. Put this folder in folder 'Sources'.
 2. Markdown does not need a PDF
+
+
+
+## How to write for DCClab
+
+Keeping documentation for the group is a difficult task if there are no standards. Hence, here are the various standards anyone must follow:
+
+1. Documents are in english
+
+2. Be clear, be concise but complete.
+
+
+
 
 ## Editors and links with Github
 
