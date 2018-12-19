@@ -27,7 +27,6 @@ Somme de champs phaseurs
 Les speckles sont le résultat d’une somme de phaseurs de phase et/ou
 d’amplitude aléatoires. On peut donc écrire le champ électrique
 résultant en un point de l’ensemble de speckles de la façon suivante:
-
 $$
 A e^{j\theta} = \frac{1}{\sqrt{N}}\sum_{n=1}^{N}a_{n}e^{j\phi_{n}} \label{eq1}
 $$
@@ -70,14 +69,14 @@ point de l’ensemble de speckles,
 
 $$
 \label{Eq:FDPInt}
-​    P_{I}(I) = \frac{1}{\overline{I}}\exp(-I/\overline{I}),
+    P_{I}(I) = \frac{1}{\overline{I}}\exp(-I/\overline{I}),
 $$
 
 et celle de la phase
 
 $$
 \label{Eq:FDPPhase}
-​    P_{\theta}(\theta) = \frac{1}{2\pi}.
+    P_{\theta}(\theta) = \frac{1}{2\pi}.
 $$
 
 Le résultat de l’équation \[Eq:FDPPhase\] n’est pas surprenant puisque
