@@ -15,9 +15,7 @@ Cet ouvrage résume les différents aspects des statistiques des speckles.
 Les statistiques de premier ordre (en un seul point) sont d’abord
 étudiées pour l’amplitude, l’intensité et la phase. Les statistiques de
 deuxième ordre (en deux points) sont également abordées afin de trouver
-la taille approximative des speckles dans les différents axes de
-l’espace. Ensuite, l’intensité intégrée est abordée. Le concept de
-speckles contraints, qui s’applique aux fibres optiques, est introduit
+la taille approximative des speckles dans les différents axes de l’espace. Ensuite, l’intensité intégrée est abordée. Le concept de speckles contraints, qui s’applique aux fibres optiques, est introduit
 et les caractéristiques des speckles observés à la sortie d’une fibre
 optique multimode sont détaillés. Enfin, une discussion sur les
 différents facteurs qui permettent de modifier le contraste d’un
@@ -37,7 +35,7 @@ $$
 où le facteur 1/$\sqrt{N}$ est introduit afin d’avoir un moment de
 second ordre fini lorsque le nombre de phaseurs $N$ de la somme tend
 vers l’infini. À partir de cette équation, on pose trois conditions sur
-les phaseurs sommés: $\ref{eq1}$
+les phaseurs sommés:
 
 1.  Les amplitudes et les phases de deux phaseurs sont statistiquement
     indépendantes
@@ -235,9 +233,8 @@ du coeur de la fibre a une forme exponentielle décroissante. La méthode
 proposée par Goodman pour trouver la nouvelle FDP est d’appliquer une
 contrainte à celle-ci, soit que la puissance totale $W_T$ est constante
 le long du coeur de la fibre. On cherche donc la FDP conditionnelle
-$P(W|W_T)​$ qui est obtenue à partir de l’équation \[Eq:IntIntUn\] et de
+$P(W|W_T)$ qui est obtenue à partir de l’équation \[Eq:IntIntUn\] et de
 la loi de Bayes:
-
 $$
 P(W|W_T) = \frac{1}{W_T}\left(\frac{W}{W_T}\right)^{\kappa N_{T}-1}\left(1-\frac{W}{W_T}\right)^{(1-\kappa)N_{T}-1}\frac{\Gamma(N_{T})}{\Gamma(\kappa N_{T})\Gamma((1-\kappa)N_{T})}
 $$
