@@ -1,3 +1,7 @@
 
 Sources/.DS_Store
 .DS_Store
+*.aux
+*.out
+*.log
+*.toc
