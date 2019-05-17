@@ -1,4 +1,4 @@
-# Coding style in DCC Lab
+# Coding style and practices in DCC Lab
 
 We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act of programming is the basis of many of the tasks we do, so it must be done well.
 
@@ -28,11 +28,11 @@ We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act o
 
 7. The best function has no argument. The second best function has only one argument. The third best function has only two arguments. There is no fourth best function.
 
-8. **Code without tests is incomplete code**. MATLAB has UnitTest. Python has unitTest. Swift and Objective-C have XCTest, C ++ has several libraries of Unit Testing. All languages ​​now have test libraries (even LabView for goodness sake).
+8. **Code without tests is incomplete code**. MATLAB has `UnitTest`. Python has `unitTest`. Swift and Objective-C have `XCTest`, C ++ has several libraries of Unit Testing. All languages ​​now have test libraries (even LabView for goodness sake).
   Writing tests makes it possible to better understand and better factorize your own code, in addition to making it more reliable. It allows you to embark on big changes without being afraid of breaking something. Write tests.
 
 9. The use of a versioning system GitHub is essential.
-  The versioning allows to modify the code with assurance and allows to give it to a collaborator as it was at the time of a publication. The dcclab group has a DCC-Lab GitHub page on the server.
+  The versioning allows to modify the code with assurance and allows to give it to a collaborator as it was at the time of a publication. The dcclab group has a [page](https://github.com/DCC-Lab) on the server.
 
 10. No one should work in `master`.  Make a branch with a name that is indicative of what you are trying to accomplish (e.g., `optimizationImageSegmentation`).
 
