@@ -7,16 +7,14 @@ We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act o
 1. The code should read as a text.
   Variable names and function names are important. A boolean variable can be called `isDone`. A table representing an image can be called `image`. A function can have an action verb in its name.
 
-2. We take a "camel-case" style, that is, the first letter is lowercase, and then each word is capitalized, as in `createRayPlot()`. We never use underscores (_).
+2. We take a "camel-case" style, that is, the first letter is lowercase, and then each word is capitalized, as in `createRayPlot()`. We never use underscores (_) which are reserved for internal, hidden, private, low-level variables.
 
-3. A function should do only one thing.
+3. Just because the code works does not mean the code is good.
+   The validity tests, the style, the simplicity, the ease of maintaining the code are all essential characteristics of a well done task.
 
-4. Just because the code works does not mean the code is good.
-  The validity tests, the style, the simplicity, the ease of maintaining the code are all essential characteristics of a well done task.
+4. There are no worse comments than comments that are out of date or redundant. If the code reads as text, comments are not necessary.
 
-5. There are no worse comments than comments that are out of date or redundant. If the code reads as text, comments are not necessary.
-
-6. If-else are written and indented like this because this style is compact:
+5. If-else are written and indented like this because this style is compact:
 
    ```
    if (condition) {
@@ -25,6 +23,8 @@ We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act o
        // more code
    }
    ```
+
+6. A function should do only one thing.
 
 7. The best function has no argument. The second best function has only one argument. The third best function has only two arguments. There is no fourth best function.
 
