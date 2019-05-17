@@ -40,11 +40,13 @@ We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act o
 
   *Code not on GitHub leads to papers not being published, memoires and theses not being read, and students not graduating.*
 
+  Learn basic GitHub [here](https://github.com/dccote/Enseignement/blob/master/HOWTO/HOWTO-GitHub.md).
+
 2. No one should work in `master`.  Make a branch with a name that is indicative of what you are trying to accomplish (e.g., `optimizationImageSegmentation`).
 
 3. A branch should have a lifetime of approximately 1 week, never more than 2 weeks.
 
-4. Commit the code as a group of changes by subproject and commit all the files together that were modified. Commit often.
+4. Commit the code as a group of changes by subproject and commit all the files that were modified together. Commit often (I commit approximately every 20 minutes when I work).
 
 5. When you are done, request a Pull Request *whenever possible*. If someone is available to review the code, assign it to that person.  If no one is available, then you can merge it yourself but go through the Pull Request mechanism anyway for tracking purposes.
 
