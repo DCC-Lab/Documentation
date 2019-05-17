@@ -2,7 +2,7 @@
 
 We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act of programming is the basis of many of the tasks we do, so it must be done well.
 
-## The rules
+## The style
 
 1. The code should read as a text.
   Variable names and function names are important. A boolean variable can be called `isDone`. A table representing an image can be called `image`. A function can have an action verb in its name.
@@ -28,16 +28,26 @@ We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act o
 
 7. The best function has no argument. The second best function has only one argument. The third best function has only two arguments. There is no fourth best function.
 
-8. **Code without tests is incomplete code**. MATLAB has `UnitTest`. Python has `unitTest`. Swift and Objective-C have `XCTest`, C ++ has several libraries of Unit Testing. All languages ​​now have test libraries (even LabView for goodness sake).
-  Writing tests makes it possible to better understand and better factorize your own code, in addition to making it more reliable. It allows you to embark on big changes without being afraid of breaking something. Write tests.
+8. **Code without tests is incomplete code**. MATLAB has `UnitTest`. Python has `unitTest`. Swift and Objective-C have `XCTest`, C ++ has several libraries of Unit Testing. All languages now have test libraries (even LabView for goodness sake).
+   Writing tests makes it possible to better understand and better factorize your own code, in addition to making it more reliable. It allows you to embark on big changes without being afraid of breaking something. Write tests.
 
-9. The use of a versioning system GitHub is essential.
-  The versioning allows to modify the code with assurance and allows to give it to a collaborator as it was at the time of a publication. The dcclab group has a [page](https://github.com/DCC-Lab) on the server.
 
-10. No one should work in `master`.  Make a branch with a name that is indicative of what you are trying to accomplish (e.g., `optimizationImageSegmentation`).
 
-11. A branch should have a lifetime of approximately 1 week, never more than 2 weeks.
+## The practice
 
-12. Commit the code as a group of changes by subproject and commit all the files together that were modified. Commit often.
+1. The use of GitHub is mandatory.
+  Versioning allows one to modify the code with assurance and allows one to give it to a collaborator as it was at the time of a publication. The dcclab group has a [page](https://github.com/DCC-Lab) on GitHub.
 
-    
+  *Code not on GitHub leads to papers not being published, memoires and theses not being read, and students not graduating.*
+
+2. No one should work in `master`.  Make a branch with a name that is indicative of what you are trying to accomplish (e.g., `optimizationImageSegmentation`).
+
+3. A branch should have a lifetime of approximately 1 week, never more than 2 weeks.
+
+4. Commit the code as a group of changes by subproject and commit all the files together that were modified. Commit often.
+
+5. When you are done, request a Pull Request *whenever possible*. If someone is available to review the code, assign it to that person.  If no one is available, then you can merge it yourself but go through the Pull Request mechanism anyway for tracking purposes.
+
+   
+
+     
