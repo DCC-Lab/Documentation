@@ -32,8 +32,6 @@ This procedure will get you a working Jupyter Notebook logged on CalculQuebec's 
 
    Login with your CalculQuebec account. Check *Requires a GPU* to use *Helios*. 
 
-   For further instructions on how to install packages and kernels (python environnements)
-   
+   For further instructions on how to install packages and kernels (python environnements) [^1] , follow the [CQ Jupyter Wiki](https://wiki.calculquebec.ca/w/JupyterHub). 
+
    [^1]: Make sure you add the desired module (or python version) on the software tab in the jupyter notebook before following the instructions on how to add a new kernel. 
-   
-   , follow the [CQ Jupyter Wiki](https://wiki.calculquebec.ca/w/JupyterHub). 
