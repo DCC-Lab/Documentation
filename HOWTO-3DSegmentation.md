@@ -49,7 +49,7 @@ The data we will be looking at for the tutorial is a 3D image of a mouse brain f
 
    i. With *Analyze -> 3D Object Counter* (thr.≈20, min≈1000, max≈55 000 000)
 
-   ii. Keep the object map and use *Image -> Adjust -> Brightness -> Apply*. 3D Objects are now visibled and colored.
+   ii. Keep the object map and use *Image -> Adjust -> Brightness -> Apply*. 3D Objects are now visible and colored.
 
 ![](https://github.com/DCC-Lab/Documentation/blob/master/Sources/HOWTO-3DSegmentation/segment.PNG)
 
