@@ -26,7 +26,7 @@ This procedure will get you a working Jupyter Notebook logged on CalculQuebec's 
 
    You need to connect to *Helios* by SSH at least once to get access to a Jupyter Notebook. 
 
-   Follow the procedure [written here](https://wiki.calculquebec.ca/w/Se_connecter_et_transf%C3%A9rer_des_fichiers/en) for windows or mac/linux to connect to the server *helios.calculquebec.ca* on port 22. 
+   Follow the procedure [written here](https://wiki.calculquebec.ca/w/Se_connecter_et_transf%C3%A9rer_des_fichiers/en) for windows or mac/linux to connect to the server *helios.calculquebec.ca* on port 22. The website also shows how to transfer data to your server. 
 
 5. [**Open your Jupyter Notebook**](https://jupyter.calculquebec.ca/hub/home)
 
