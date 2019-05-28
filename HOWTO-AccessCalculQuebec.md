@@ -35,3 +35,64 @@ This procedure will get you a working Jupyter Notebook logged on CalculQuebec's 
    For further instructions on how to install packages and kernels (python environnements) [^1] , follow the [CQ Jupyter Wiki](https://wiki.calculquebec.ca/w/JupyterHub). 
 
    [^1]: Make sure you add the desired module (or python version) on the software tab in the jupyter notebook before following the instructions on how to add a new kernel. 
+
+
+
+### Clone a GitHub repository
+
+*N.B. : Do not leave any `<` `>` characters.*
+
+1. **Log into Helios server with SSH (last step 4)**
+2. **Clone repo:**
+
+```
+git clone git://github.com/<USER>/<REPO>.git
+cd <REPO>
+git config --global user.name "<username>"
+git config --global user.email <your@email.ca>
+git remote add origin git@github.com:<USER>/<REPO>.git
+```
+
+3. **Create SSH access key:**
+
+```
+eval $(ssh-agent -s)
+ssh-keygen -t rsa -b 4096 -C "<your@email.ca>"
+```
+
+​	*Press enter for default key file location.*
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+
+4. **Copy SSH key to your GitHub Account**
+
+   ```
+   clip < ~/.ssh/id_rsa.pub
+   ```
+
+   > *If it does not work, find the hidden file and copy its content.*
+
+   Then go to GitHub Website -> Account Settings -> SSH -> Add New SSH and paste the key.
+
+   Come back to your terminal and type in
+
+   ```
+   ssh-add -l
+   ```
+
+   Verify connection with 
+
+   ```
+   ssh -vT git@github.com
+   ```
+
+5. **Commit and push changes:**
+
+```
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+```
+
