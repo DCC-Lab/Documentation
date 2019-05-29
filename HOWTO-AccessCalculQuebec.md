@@ -59,7 +59,26 @@ This procedure will get you a working Jupyter Notebook logged on CalculQuebec's 
 
    Use this connected terminal for the following steps.
 
-2. **Clone repo:**
+2. **Clone repository**
+
+If `git clone` with https (option 1) outputs a connection error, try option 2. 
+
+**OPTION 1 : Github https login** (for private repo ?)
+
+```
+git clone https://github.com/<USER>/<REPO>.git
+cd <REPO>
+```
+
+​	Remember credentials
+
+```
+git config credential.helper store
+```
+
+ 
+
+##### OPTION 2 : Github ssh key direct access
 
 ```
 git clone git://github.com/<USER>/<REPO>.git
@@ -69,7 +88,7 @@ git config --global user.email <your@email.ca>
 git remote add origin git@github.com:<USER>/<REPO>.git
 ```
 
-3. **Create SSH access key:**
+​	Create SSH access key:
 
 ```
 eval $(ssh-agent -s)
@@ -82,29 +101,40 @@ ssh-keygen -t rsa -b 4096 -C "<your@email.ca>"
 ssh-add ~/.ssh/id_rsa
 ```
 
-4. **Copy SSH key to your GitHub Account**
+​	Copy SSH key to your GitHub Account
 
-   ```
-   clip < ~/.ssh/id_rsa.pub
-   ```
+```
+clip < ~/.ssh/id_rsa.pub
+```
 
-   > *If it does not work, find the hidden file and copy its content.*
+> *If it does not work, find the hidden file and copy its content.*
 
-   Then go to GitHub Website -> Account Settings -> SSH -> Add New SSH and paste the key.
+​	Then go to GitHub Website -> Account Settings -> SSH -> Add New SSH and paste the key.
 
-   Come back to your terminal and type in
+​	Come back to your terminal and type in
 
-   ```
-   ssh-add -l
-   ```
+```
+ssh-add -l
+```
 
-   Verify connection with 
+​	Verify connection with 
 
-   ```
-   ssh -vT git@github.com
-   ```
+```
+ssh -vT git@github.com
+```
 
-5. **Commit and push changes:**
+ 
+
+3. **Create .gitignore file (optional)**
+
+```
+touch .gitignore
+vim .gitignore
+```
+
+​	Press <a> to edit the file. Then press <escape>, type `:wq`  and press <enter> to save file.
+
+4. **Commit and push changes:**
 
 ```
 git add .
