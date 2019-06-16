@@ -12,20 +12,20 @@ This procedure will get you a working Jupyter Notebook logged on CalculQuebec's 
 
 ## Procedure
 
-1. [**Create a ComputeCanada Account**](https://ccdb.computecanada.ca/account_application)
+### 1. [**Create a ComputeCanada Account**](https://ccdb.computecanada.ca/account_application)
 
    You will need the sponsor ID from Daniel Côté. Now wait/ask for approval from Daniel. 
 
-2. **Apply for a CalculQuebec Server Account** 
+### 2. **Apply for a CalculQuebec Server Account** 
 
-   1. Login to your ComputeCanada Account and go to *Account -> Apply for a consortium account* to create an account on a calculation server, and apply for CalculQuebec. Make sure to check *Helios* device at least.
-2. If you want to request access to servers later, login to [portail.calculquebec.ca](http://portail.calculquebec.ca) and go to My Account.
-   3. There you can request access to specific servers:
+   Login to your ComputeCanada Account and go to *Account -> Apply for a consortium account* to create an account on a calculation server, and apply for CalculQuebec. Make sure to check *Helios* device at least.
+   
+> If you want to request access to servers later, login to [portail.calculquebec.ca](http://portail.calculquebec.ca) and go to My Account. There you can request access to specific servers:
       ![image-20190614150441982](assets/image-20190614150441982.png)
    
-3. **Wait around 30 minutes for approval.**
+### 3. **Wait around 30 minutes for approval.**
 
-4. **Log in to Helios server with SSH**
+### 4. **Log in to Helios server with SSH**
 
    You need to connect to *Helios* by SSH at least once to get access to a Jupyter Notebook. 
 
@@ -44,7 +44,7 @@ This procedure will get you a working Jupyter Notebook logged on CalculQuebec's 
 
    Detailed procedure [written here](https://wiki.calculquebec.ca/w/Se_connecter_et_transf%C3%A9rer_des_fichiers/en). The website also shows how to transfer data to your server. 
 
-5. [**Open your Jupyter Notebook**](https://jupyter.calculquebec.ca/hub/home)
+### 5. [**Open your Jupyter Notebook**](https://jupyter.calculquebec.ca/hub/home)
 
    Login with your CalculQuebec account. Check *Requires a GPU* to use *Helios*. 
 
@@ -64,11 +64,11 @@ You may want to install Anaconda3 to have a complete, manageable environment. In
 
 *N.B. : Do not leave any `<` `>` characters.*
 
-1. **Log into Helios server with SSH (last step 4)**
+### 1. **Log into Helios server with SSH (last step 4)**
 
    Use this connected terminal for the following steps.
 
-2. **Clone repository**
+### 2. **Clone repository**
 
   If `git clone` with https (option 1) outputs a connection error, try option 2. 
 
@@ -85,7 +85,7 @@ You may want to install Anaconda3 to have a complete, manageable environment. In
   git config credential.helper store 
   ```
 
-  OPTION 2 : Github ssh key
+  **OPTION 2 : Github ssh key**
 
   ```
   git clone git://github.com/<USER>/<REPO>.git
@@ -132,7 +132,7 @@ You may want to install Anaconda3 to have a complete, manageable environment. In
 
 
 
-3. **Create .gitignore file (optional)**
+### 3. **Create .gitignore file (optional)**
 
   ```
   touch .gitignore
@@ -141,7 +141,7 @@ You may want to install Anaconda3 to have a complete, manageable environment. In
 
 	Press <a> to edit the file. Then press <escape>, type `:wq`  and press <enter> to save file.
 
-4. **Commit and push changes:**
+### 4. **Commit and push changes:**
 
   ```
   git add .
