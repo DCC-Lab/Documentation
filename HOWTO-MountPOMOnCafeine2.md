@@ -1,11 +1,11 @@
 # How to mount POM (or any other drive) on Cafeine2 (or any other Mac OS server)
 
 Working in command lines can sometimes be a real pleasure. But for beginners, it can be a real pain.
-I hope that this present document will help future students or researchers of the DCCLab to understand the not-so-magic behind command line and server mounting. **Note** : This little tutorial is about POM and Cafeine2 but it can be generalized.
+I hope that this present document will help future students or researchers of the DCCLab to understand the not-so-magic behind command lines and server mounting. **Note** : This little tutorial is about POM and Cafeine2 but it can be generalized.
 
 ## PART 1: Accessing Cafeine2
 To access Cafeine2, you need an account (see Daniel for details). When your account is created, you can access Cafeine by command lines.
-To do so, open a command prompt (cmd on Windows).
+To do so, open a terminal/command prompt (like `cmd` on Windows).
 The main command to access the server is `ssh accountName@cafeine2.crulrg.ulaval.ca`
 (where, obviously, you replace `accountName` by your account name). Use the `ssh` command when you want to access remote servers. Then, the terminal will ask for your password (if needed, like on Cafeine2). Don't panic if you type your password and nothing appears on screen, your password will still register when pressing `Enter`. Now, you are supposed to be on Cafeine2, in your personnal directory. For example, you should see something like `cafeine2:~ dcclab$` on your terminal screen (where `dcclab` is replaced by you username). Every command you write will be after your username (example: `cafeine2:~ dcclab$ python` to run python)
 
@@ -62,10 +62,50 @@ Julie                           New-03-Image Export-140         injection AAV
 KINGSTON                        Test viabilite?? mCherry+EGFP   microscopie e??lectronique
 ```
 We can see that `test` *contains* the directories within `COLLABORATION/POM`. We can now access one of these folders and see that everything is there. We can access anything in POM from this mount point. To return to you root directory, you can use the same command but with a different argument: `cd ..` (the two dots argument meaning "return to the previous directory in the hierarchy").
+```
+(base) cafeine2:test dcclab$ cd injection\ AAV/
+(base) cafeine2:test dcclab$ ls
+S58_AAV595.numbers      Virus                   re??sultats bruts
+(base) cafeine2:injection AAV dcclab$ cd ..
+(base) cafeine2:test dcclab$ ls
+Anne                            New-03-Image Export-140         microscopie e??lectronique
+Julie                           Test viabilite?? mCherry+EGFP   untitled folder 2
+KINGSTON                        Thumbs.db
+MEP                             injection AAV
+```
 
 Now, you are ready to work on Cafeine with an access to POM. You only need to figure out what is the right path to access your mounting point from any other directory. This can still be a pain, but it is still better than having to navigate deeply through Cafeine2 to find POM!
 
 ## PART 4: Unmount the beast
 Now that you are done with POM and you want to unmount it from the mount point, there is one command to remember:
 
-`diskutil`
+`diskutil unmount ./mountPoint` if you are in the directory of your mountpoint or 
+
+`diskutil unmount ./mountPointParent/... /mountPoint`
+
+Then, a message should appear on the screen explaning that the unmount was successful (or not). Then, when you return to your old mount point, the directory should be empty:
+```
+(base) cafeine2:~ dcclab$ diskutil unmount ./test
+Unmount successful for ./test
+(base) cafeine2:~ dcclab$ cd test
+(base) cafeine2:test dcclab$ ls
+(base) cafeine2:test dcclab$
+```
+Now that you safely unmounted POM, you can delete the mounting point directory with `rmdir dirName`. This command removes an empty directory (to remove existing files, use `rm fileName`):
+```
+(base) cafeine2:~ dcclab$ rmdir test
+(base) cafeine2:~ dcclab$ ls
+Applications
+Desktop
+Documents
+Downloads
+GitHub
+Library
+Movies
+Music
+Pictures
+Public
+StudentsWorkToStore
+fibercomb_plate_v1.PDF
+tempTestExtractingDataFromCZIFiles_GabrielGenest_Summer2019
+```
