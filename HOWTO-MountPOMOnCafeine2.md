@@ -79,11 +79,11 @@ Now, you are ready to work on Cafeine with an access to POM. You only need to fi
 ## PART 4: Unmount the beast
 Now that you are done with POM and you want to unmount it from the mount point, there is one command to remember:
 
-`diskutil unmount ./mountPoint` if you are in the directory of your mountpoint or 
+`diskutil unmount ./mountPoint` if you are in the directory of your mount point or 
 
 `diskutil unmount ./mountPointParent/... /mountPoint`
 
-Then, a message should appear on the screen explaning that the unmount was successful (or not). Then, when you return to your old mount point, the directory should be empty:
+Then, a message should appear on the screen explaining that the unmount was successful (or not). Then, when you return to your old mount point, the directory should be empty:
 ```
 (base) cafeine2:~ dcclab$ diskutil unmount ./test
 Unmount successful for ./test
@@ -109,3 +109,4 @@ StudentsWorkToStore
 fibercomb_plate_v1.PDF
 tempTestExtractingDataFromCZIFiles_GabrielGenest_Summer2019
 ```
+`test` is now deleted and you can go on with your day.
