@@ -26,8 +26,8 @@ The goal of this document is to give an introduction to the general concepts and
 
 Machine learning started flourishing with the arrival of the big data, the increase in computation power (GPU) and the development of new machine learning algorithms. 
 
-#### Traditional programming VS Machine Learning
-![Traditional programming](assets\machineLearning\traditional.png)
+##### Traditional programming VS Machine Learning
+<img src="assets/machineLearning/traditional.png" width="600px" />
 
 In traditional programming you hard code the behavior of the program. In machine learning, you leave a lot of that to the machine to learn from the data iteratively. ML is used in the case when traditional programming strategy falls behind and it is not enough to fully implement a certain task. This is usually the case when the amount of inputs is too high, as with forecasts, image processing, speech recognition, etc.
 
@@ -53,11 +53,38 @@ In image classification, supervised learning will extract features from the inpu
 
 <img src="assets/machineLearning/unsupervised.png" width="600px"/>
 
+ 
+
+----
+
+
 
 ## 2. Machine learning algorithms <a name="algorithms"></a>
-An interesting list of all the popular machine learning algorithms is available [here](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/). The two main categories that we will discuss here are **Neural Networks** and **Deep Learning**. 
 
-#### Neural Networks
+After all the subjects we presented, we will focus our attention on supervised learning for classification, which is clearly the subject of interest for data analysis in science. To address the problem of classification, we will discuss two popular machine learning algorithms suited for the task : the "simple" neural networks (perceptron) and the deep learning approach (focussed on CNN). 
+
+*An interesting and exhausting list of all the popular machine learning algorithms is also available [here](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/).*
+
+### Neural Networks <a name="NN"></a>
+
+### Deep Learning <a name="DL"></a>
+
+ 
+
+ 
+
+-----
+
+----------
+
+###### Scratch
+
+-----
+
+----
+
+- Neural networks: perceptron, feature extraction, loss function, activation, back propagation
+- Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, )
 
 A good way to better understand supervised learning is to jump into the inner workings of its model: in this case, a "simple" fully-connected neural network. 
 
@@ -92,5 +119,5 @@ alphaGo, self driving cars, image and speech recognition, forecast
 
 ###### todo
 
-https://en.wikipedia.org/wiki/Supervised_learning#Algorithm_choice
+https://en.wikipedia.org/wiki/Supervised_learning#Algorithm_choice , see dimensionality reduction.
 
