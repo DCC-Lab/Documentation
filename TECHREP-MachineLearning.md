@@ -2,21 +2,26 @@
 
 The goal of this document is to give an introduction to the general concepts and theory around Machine Learning and its applications. 
 
+ 
 
+----
 
 ### Table Of Content
 
 1. [Introduction](#introduction)
    1. [Understanding the nomenclature](#nomenclature)
+   2. [Branches of Machine Learning](#branches)
 2. [Machine learning algorithms](#algorithms)
+   1. [Neural Networks](#NN)
+   2. [Deep Learning](#DL)
 
-[TOC]
+-----
 
-
+ 
 
 ## 1. Introduction <a name="introduction"></a>
 
-#### Understanding the nomenclature <a name="nomenclature"></a>
+### Understanding the nomenclature <a name="nomenclature"></a>
 
 <img src="assets/machineLearning/categories.png" width="400px" />
 
@@ -31,7 +36,7 @@ Machine learning started flourishing with the arrival of the big data, the incre
 
 In traditional programming you hard code the behavior of the program. In machine learning, you leave a lot of that to the machine to learn from the data iteratively. ML is used in the case when traditional programming strategy falls behind and it is not enough to fully implement a certain task. This is usually the case when the amount of inputs is too high, as with forecasts, image processing, speech recognition, etc.
 
-#### Branches in Machine Learning
+### Branches of Machine Learning <a name="branches"></a>
 
 <img src="assets/machineLearning/MLtypes.png" width="800px" />
 
