@@ -6,8 +6,7 @@ This guide is written in parallel with a machine learning Python library from DC
 
 1. Data collection
 2. Data preparation
-3. Model preparation
-4. Training
-5. Evaluation
-6. Optimisation
+3. Model choice and training
+4. Model evaluation
+5. Optimisation
 
