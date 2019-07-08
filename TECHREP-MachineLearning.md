@@ -4,14 +4,19 @@ The goal of this document is to give an introduction to the general concepts and
 
 
 
-#### Table Of Content
+### Table Of Content
+
+1. [Introduction](#introduction)
+   1. [Understanding the nomenclature](#nomenclature)
+2. [Machine learning algorithms](#algorithms)
+
+[TOC]
 
 
 
+## 1. Introduction <a name="introduction"></a>
 
-
-
-#### Getting the terms right
+#### Understanding the nomenclature <a name="nomenclature"></a>
 
 <img src="assets/machineLearning/categories.png" width="400px" />
 
@@ -48,21 +53,29 @@ In image classification, supervised learning will extract features from the inpu
 
 <img src="assets/machineLearning/unsupervised.png" width="600px"/>
 
- 
+
+## 2. Machine learning algorithms <a name="algorithms"></a>
+An interesting list of all the popular machine learning algorithms is available [here](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/). The two main categories that we will discuss here are **Neural Networks** and **Deep Learning**. 
+
+#### Neural Networks
+
+A good way to better understand supervised learning is to jump into the inner workings of its model: in this case, a "simple" fully-connected neural network. 
+
 
 #### The basis for supervised learning
 
 1. Data collection
 2. Data preparation
-3. Model choice and training
+3. **Model choice and training**
 4. Model evaluation
 5. Optimisation
 
+<img src="assets/machineLearning/supervised.png" width="600px"/>
 
 
-#### Applications
+#### Application examples
 
-alphaGo, self driving cars, image analysis, forecast
+alphaGo, self driving cars, image and speech recognition, forecast
 
 
 
