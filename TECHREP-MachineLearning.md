@@ -31,14 +31,14 @@ The goal of this document is to give an introduction to the general concepts and
 
 Machine learning started flourishing with the arrival of the big data, the increase in computation power (GPU) and the development of new machine learning algorithms. 
 
-##### Traditional programming VS Machine Learning
+#### Traditional programming VS Machine Learning
 <img src="assets/machineLearning/traditional.png" width="600px" />
 
 In traditional programming you hard code the behavior of the program. In machine learning, you leave a lot of that to the machine to learn from the data iteratively. ML is used in the case when traditional programming strategy falls behind and it is not enough to fully implement a certain task. This is usually the case when the amount of inputs is too high, as with forecasts, image processing, speech recognition, etc.
 
 ### Branches of Machine Learning <a name="branches"></a>
 
-<img src="assets/machineLearning/MLtypes.png" width="800px" />
+<img src="assets/machineLearning/MLtypes.PNG" width="800px" />
 
 **Reinforcement learning** is about optimizing a decision making policy with experiences and rewards. It focuses on finding a balance between exploration of territory and exploitation of current knowledge. 
 
@@ -48,7 +48,7 @@ In traditional programming you hard code the behavior of the program. In machine
 
 **Supervised learning** tries to learn a function that maps an input to an output based on a learning process over training examples. In supervised learning, each example is a *pair* consisting of an input object and a desired output value (labels). This topic divides into classification (hottest subject in machine learning) and regression (forecasts, predictions). 
 
-<img src="assets/machineLearning/class_regress.png" width="600px"/>
+<img src="assets/machineLearning/class_regress.PNG" width="600px"/>
 
 **Unsupervised learning** helps to find unknown patterns in an input dataset without pre-existing labels to regroup inputs into clusters, reduce the number of dimensions or simplify a vast input into a few principle components. The main methods used in unsupervised learning are principal component and cluster analysis. 
 
