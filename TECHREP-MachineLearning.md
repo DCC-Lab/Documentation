@@ -31,33 +31,29 @@ The goal of this document is to give an introduction to the general concepts and
 Machine learning started flourishing with the arrival of the big data, the increase in computation power (GPU) and the development of new machine learning algorithms. 
 
 #### Traditional programming VS Machine Learning
-<p align="center"><img src="assets/machineLearning/traditional.png" width="600px" /></p>
+<p align="center"><img src="assets/machineLearning/traditional.png" width="500px" /></p>
 
 In traditional programming you hard code the behavior of the program. In machine learning, you leave a lot of that to the machine to learn from the data iteratively. ML is used in the case when traditional programming strategy falls behind and it is not enough to fully implement a certain task. This is usually the case when the amount of inputs is too high, as with forecasts, image processing, speech recognition, etc.
 
 ### Branches of Machine Learning <a name="branches"></a>
 
 <p align="center"><img src="assets/machineLearning/MLtypes.PNG" width="800px" /></p>
-
 **Reinforcement learning** is about optimizing a decision making policy with experiences and rewards. It focuses on finding a balance between exploration of territory and exploitation of current knowledge. 
 
 *[Example](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html): the agent has to decide between two actions - moving the cart left or right - so that the pole attached to it stays upright*
 
 <p align="center"><img src="assets/machineLearning/RLcartpole.gif" width="400px"/></p>
-
 **Supervised learning** tries to learn a function that maps an input to an output based on a learning process over training examples. In supervised learning, each example is a *pair* consisting of an input object and a desired output value (labels). This topic divides into classification (hottest subject in machine learning) and regression (forecasts, predictions). 
 
-<p align="center"><img src="assets/machineLearning/class_regress.PNG" width="600px"/></p>
+<p align="center"><img src="assets/machineLearning/class_regress.PNG" width="500px"/></p>
 
 **Unsupervised learning** helps to find unknown patterns in an input dataset without pre-existing labels to regroup inputs into clusters, reduce the number of dimensions or simplify a vast input into a few principle components. The main methods used in unsupervised learning are principal component and cluster analysis. 
 
-<p align="center"><img src="assets/machineLearning/clustering.png" width="600px"/></p>
+<p align="center"><img src="assets/machineLearning/clustering.png" width="500px"/></p>
 
 In image classification, supervised learning will extract features from the input and learn to correctly link these features to the input label. Unsupervised learning with extract features from the inputs and only try to regroup them into *different* clusters.
 
 <p align="center"><img src="assets/machineLearning/unsupervised.png" width="600px"/></p>
-
- 
 
 ----
 
@@ -65,11 +61,36 @@ In image classification, supervised learning will extract features from the inpu
 
 ## 2. Machine learning algorithms <a name="algorithms"></a>
 
-After all the subjects we presented, we will focus our attention on supervised learning for classification, which is clearly the subject of interest for data analysis in science. To address the problem of classification, we will discuss two popular machine learning algorithms suited for the task : the "simple" neural networks (perceptron) and the deep learning approach (focussed on CNN). 
+After all the subjects we presented, we will focus our attention on supervised learning for classification, which is clearly the subject of interest for data analysis in science. To address the problem of classification, we will discuss two popular machine learning algorithms suited for the task : the "simple" neural networks and the deep learning approach (mainly CNN). 
 
 *An interesting and exhausting list of all the popular machine learning algorithms is also available [here](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/).*
 
 ### Neural Networks <a name="NN"></a>
+
+#### Single-layer NN (or Perceptron)
+
+The simplest neural network format is called a Perceptron and consists of a single input layer connected to their corresponding weights. A weighted sum is then calculated and fed into a step function. This *linear binary classifier* can be used to say whether or not an input belongs to some specific class. We can generally say that a perceptron is a single-layer neural network. 
+
+<p align="center"><img src="assets/machineLearning/perceptron.png" width="450px"/></p>
+
+```python
+""" Code example of a simple perceptron """
+
+# TODO
+
+# Follow with a code example for a multi-layer neural network
+
+# maybe try to use the same case-study to then compare [Perceptron: nope since its binary...], NN, CNN, optimized CNN...
+```
+
+#### Multi-layer NN
+
+```python
+""" Code example of a multi-layer neural network """
+
+# TODO
+```
+
 
 ### Deep Learning <a name="DL"></a>
 
@@ -102,7 +123,6 @@ A good way to better understand supervised learning is to jump into the inner wo
 5. Optimisation
 
 <p align="center"><img src="assets/machineLearning/supervised.png" width="600px"/></p>
-
 
 #### Application examples
 
