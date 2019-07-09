@@ -13,7 +13,7 @@ We will here look into manually extracting basic spatial informations about stru
 
 The data we will be looking at for the tutorial is a 3D image of a mouse brain from *Dr. Edward Ruthazer*. Here is a preview of the volume:
 
-![3D Test Image Preview](https://github.com/DCC-Lab/Documentation/blob/master/Sources/HOWTO-3DSegmentation/data3DPreview.png)
+![3D Test Image Preview](assets/3DSegmentation/data3DPreview.png)
 
 > " The blue channel is dapi to label nuclei, the green channel is a 3A10 antibody that labels retinal axons, the **red channel** is MBP immunostaining. **It is the MPB we would like to fully parameterize** for analysis across treatments. It represents the onset of early optic tract myelination. " - *Dr. Edward Ruthazer*.
 
@@ -37,7 +37,7 @@ The data we will be looking at for the tutorial is a 3D image of a mouse brain f
 
    With *Process -> Noise -> Remove outliers* (r≈4, thr.≈1)
 
-![](https://github.com/DCC-Lab/Documentation/blob/master/Sources/HOWTO-3DSegmentation/prep.PNG)
+![](assets/3DSegmentation/prep.PNG)
 
 6. **Crop** (if desired)
 
@@ -51,11 +51,11 @@ The data we will be looking at for the tutorial is a 3D image of a mouse brain f
 
    ii. Keep the object map and use *Image -> Adjust -> Brightness -> Apply*. 3D Objects are now visible and colored.
 
-![](https://github.com/DCC-Lab/Documentation/blob/master/Sources/HOWTO-3DSegmentation/segment.PNG)
+![](assets/3DSegmentation/segment.PNG)
 
 8. **Save** statistics and object map if desired
 
-![](https://github.com/DCC-Lab/Documentation/blob/master/Sources/HOWTO-3DSegmentation/results.PNG)
+![](assets/3DSegmentation/results.PNG)
 
 9. **3D View**
 
