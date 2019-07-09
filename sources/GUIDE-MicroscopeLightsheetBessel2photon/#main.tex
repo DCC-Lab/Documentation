@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{cmbright}               % font
+\usepackage[T1]{fontenc} 
+\usepackage[francais]{babel}
+
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{graphicx} 
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\onespacing
+\usepackage{hyperref}
+\definecolor{niceblue}{RGB}{0,102,204}
+\hypersetup{
+    colorlinks,
+    linkcolor=niceblue,         % for document links
+    urlcolor=magenta            % for URLs
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+
+% \usepackage{supertabular} 
+% \usepackage{icomma}      
+% \usepackage{esint}     
+% \usepackage{multirow} 
+% \usepackage[caption=false]{subfig}
+% \usepackage{tikz}
+% \usepackage{caption}   
+% \usepackage[bottom]{footmisc}
+% \usepackage{gensymb} 
+% \usepackage{tabulary}
+% \usepackage{array}
+% \usepackage{hhline}
+% \usepackage{siunitx}
+% \usepackage{tcolorbox}
+% \usepackage{textcomp}
+% \usepackage{parskip}
+% \usepackage{subfigure}
+% \usepackage{titlesec}
+% \usepackage{url}
+% \usepackage{amsmath,mathtools}   
+% \usepackage{amssymb,amsfonts} 
+% \usepackage{physics}
+% \usepackage[demo]{graphicx}
+% \usepackage{lastpage}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\renewcommand\footrulewidth{1pt}
+\fancyfoot[L]{DCCLab - Guide: Microscope Lightsheet Bessel 2-photon}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+
+
+\begin{document}
+
+\input{0-TitlePage.tex}
+\tableofcontents
+\pagenumbering{arabic}
+
+\section{Acquisition de données}
+\input{Sources/Guide-MicroscopeLightsheetBessel2photon/1-PreparerLaser.tex}
+\input{1-AllumerLeLaser.tex}
+\input{1-AjusterLeFaisceau.tex}
+\input{1-LancerLogiciel.tex}
+\input{1-AlignerCamera.tex}
+\input{1-ParamsFaisceau.tex}
+\input{1-PreparerEchantillon.tex}
+\input{1-InstallerEchantillon.tex}
+\input{1-Params3D.tex}
+\input{1-LancerAcquisition.tex}
+
+\input{2-ProcedureDeFin.tex}
+
+\input{3-Traitement.tex}
+
+\appendix
+\input{#EauChillers.tex}
+
+\end{document}
+
+
