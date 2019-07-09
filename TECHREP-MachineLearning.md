@@ -31,6 +31,8 @@ The goal of this document is to give an introduction to the general concepts and
 <p align="center"><img src="assets/machineLearning/categories.png" width="400px" /></p>
  **Artificial intelligence** is used to describe machines that mimic "cognitive" functions that humans associate with the human mind, such as "learning" and "problem solving" [1]. This general domain contains image processing, cognitive science, machine learning, neural networks and much more. **Machine learning** on its end is a more specific subject of AI that nowadays encapsulates almost all AI research topics. Its core idea is that the computer does not just use a pre-written algorithm, but learns how to solve the problem itself. 
 
+&nbsp;
+
 > *Machine Learning is a field of study that gives computers the ability to learn without being explicitly programmed.* - **Arthur Samuel** (1959)
 
 Machine learning started flourishing with the arrival of the big data, the increase in computation power (GPU) and the development of new machine learning algorithms. 
@@ -42,7 +44,7 @@ In traditional programming you hard code the behavior of the program. In machine
 ### Branches of Machine Learning <a name="branches"></a>
 
 <p align="center"><img src="assets/machineLearning/MLtypes.PNG" width="800px" /></p>
-**Reinforcement** **learning** is about optimizing a decision making policy with experiences and rewards. It focuses on finding a balance between exploration of territory and exploitation of current knowledge. 
+**Reinforcement learning** is about optimizing a decision making policy with experiences and rewards. It focuses on finding a balance between exploration of territory and exploitation of current knowledge. 
 
 *[Example](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html): the agent has to decide between two actions - moving the cart left or right - so that the pole attached to it stays upright*
 
