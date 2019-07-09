@@ -131,12 +131,13 @@ class Perceptron(object):
 ### Multi-layer NN  <a name="multi"></a>
 
 <p align="center"><img src="assets/machineLearning/NN.png" width="450px"/></p>
+
 ```python
 """ Code example of a multi-layer neural network """
 
-# TODO
-
-# maybe try to use the same case-study to then compare [Perceptron: nope since its binary...], NN, CNN, optimized CNN...
+"""TODO
+maybe try to use the same case-study to then compare [Perceptron: nope since its binary...], NN, CNN, optimized CNN...
+"""
 ```
 
 ----
@@ -192,7 +193,7 @@ A good way to better understand supervised learning is to jump into the inner wo
 5. Optimisation
 
 <p align="center"><img src="assets/machineLearning/supervised.png" width="600px"/></p>
-###### todo
+##### todo
 
 https://en.wikipedia.org/wiki/Supervised_learning#Algorithm_choice , see dimensionality reduction.
 
