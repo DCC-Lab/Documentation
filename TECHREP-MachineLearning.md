@@ -63,6 +63,7 @@ In traditional programming you hard code the behavior of the program. In machine
 In image classification, supervised learning will extract features from the input and learn to correctly link these features to the input label. Unsupervised learning with extract features from the inputs and only try to regroup them into *different* clusters.
 
 <p align="center"><img src="assets/machineLearning/unsupervised.png" width="600px"/></p>
+
 ----
 
  
@@ -79,6 +80,7 @@ Some examples of hyperparameters include loss function, regularization, learning
 #### Capacity
 An important property of a machine learning algorithm is its **capacity**. The capacity of a model describes how complex a relationship it can model, although the term is loosely defined and cannot really be quantified. Conceptually, capacity represents the number of functions that a machine learning model can select as a possible solution. A general rule is that the more parameters a model has, the higher is its capacity. A low capacity model faced with a complex task will tend to underfit (high training error). On the other end, a high capacity model applied to a simple task might overfit (low training error, but high validation and test error). A model will often include a regularization function that will increase the loss with the increase in complexity to limit overfitting. 
 <p align="center"><img src="assets/machineLearning/complexity.png" width="450px"/></p>
+
 ### Loss Function and Error <a name="error"></a>
 
 The empiric error `R_emp` corresponds to the mean of the loss calculated at each point with a chosen loss function `L(y, ŷ)` (usually either absolute error `|y-ŷ|` or quadratic error in regression, or cross entropy in classification) where `ŷ` is our prediction given by our predictor `h` with parameters `θ`. The predictor in our case is the neural network, while the parameters correspond to the weigths of its hidden layers. These parameters are optimized during training. 
@@ -157,6 +159,7 @@ A 2D filter 3x3 will have 9 weights (parameters) to adjust during training.
 <p align="center"><img src="assets/machineLearning/convolution.png" width="450px"/></p>
 A convolutional filter always has the same depth as the input tensor. The filter is moved accross the image and the output value is calculated at each step. Here is a visualisation for 8 filters of size 5x5 over an RGB image: 
 <p align="center"><img src="assets/machineLearning/singlefilter.png" width="250px"/></p>
+
 ### Convolutional layers <a name="layer"></a>
 
 A convolution layer is simply defined by having multiple filters that will move accross the input to each generate a feature map representation. A convolutional layer will have a few hyperparameters such as the number of filters, their shape, their initial state, their stride (pixel stepping: usually 1), zero-padding.
@@ -170,11 +173,13 @@ This process will be done again a few times (number of convolutional layers) in 
 <p align="center"><img src="assets/machineLearning/secondfilter.png" width="300px"/></p>
 This is the main idea behind deep learning...
 <p align="center"><img src="assets/machineLearning/baseidea.png" width="400px"/></p>
+
 ### Pooling layers<a name="pooling"></a>
 
 Since convolution will keep the input shape (except for the contour), this usually leads to an excess in dimensionality. All CNNs fix this by adding intermediate max pooling (or average pooling) layers to down-sample the input representation. 
 
 <p align="center"><img src="assets/machineLearning/maxpooling.png" width="450px"/></p>
+
 ### Dense layers<a name="dense"></a>
 
 A dense layer, or fully-connected layer, is just a regular layer of neurons in a neural network, as we just looked at. They are usually inserted at the end of a CNN to classify. We usually say that the convolutional layers act as a feature extractor, while the dense layers act as the classifier. Notice that the output of the following *AlexNet* CNN is a vector of length 1000 which means his network was used to classify images into 1000 different classes (bus, train, person, dog, etc.). 
@@ -188,6 +193,7 @@ This leads to an architecture that looks like this for the popular ***AlexNet***
 
 In deep learning, each feature layer usually reaches a deeper level of abstraction or complexity, from simple edges to actual objects. This is refered to **feature hierarchy**, and is better visualized:
 <p align="center"><img src="assets/machineLearning/hierarchy.png" width="500px"/></p>
+
 ----
 
 ## 5. Varieties and applications  ?
