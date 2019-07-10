@@ -18,7 +18,7 @@ The goal of this document is to give an introduction to the general concepts and
 3. [Neural Networks](#NN)
    1. [Perceptron](#perceptron)
    2. [Neural Network](#multi)
-4. [Convolutional Neural Networks](#CNN)
+4. [Convolutional Neural Networks and Deep Learning](#CNN)
 5. [Applications](#applications)
 -----
 
@@ -96,7 +96,7 @@ After all the subjects we presented, we will focus our attention on supervised l
 
 ### Single-layer NN (or Perceptron) <a name="perceptron"></a>
 
-The simplest neural network format is called a Perceptron and consists of a single input layer connected to their corresponding weights. A weighted sum is then calculated and fed into a step function. This *linear binary classifier* can be used to say whether or not an input belongs to some specific class. We can generally say that a perceptron is a single-layer neural network. 
+The simplest neural network format is called a Perceptron and consists of a single input layer connected to their corresponding weights. A weighted sum is then calculated and fed into a step function. This *linear binary classifier* can be used to say whether or not an input belongs to some specific class. We can generally say that a perceptron is a single-layer neural network or single-neuron NN. 
 
 <p align="center"><img src="assets/machineLearning/perceptron.png" width="450px"/></p>
 To see a **coding example** of a simple perceptron I recommend looking at the [code and explanation by Thomas Countz](https://medium.com/@thomascountz/19-line-line-by-line-python-perceptron-b6f113b161f3) :
@@ -129,8 +129,10 @@ class Perceptron(object):
 ```
 
 ### Neural Network (multi-layer)  <a name="multi"></a>
-<p align="center"><img src="assets/machineLearning/NN.png" width="450px"/></p>
-A neural network usually differs from the perceptron by having at least one hidden layer. A neural network has **nodes** (neurons) and **edges** (connections). Each node and edge usually has an associated **weight** (parameter) that is tuned during learning process. The weight changes the strength of the signal at a connection. For each hidden node, the output is calculated by some **non-linear** sum of its inputs, the **activation function** (Sigmoid, Tanh, ReLu). It is important to give non-linarity to the model so it can learn to represent more complex non-linear mappings between inputs and outputs. Sometimes, a **bias** parameter is added to the sum to serve as a threshold to shift the activation function. 
+<p align="center"><img src="assets/machineLearning/neuralNetwork.jpeg" width="350px"/></p>
+A neural network usually differs from the perceptron by having at least one hidden layer. A neural network has **nodes** (neurons) and **edges** (connections). Each node and edge usually has an associated **weight** (parameter) that is tuned during learning process. The weight changes the strength of the signal at a connection. For each hidden node (a perceptron on its own), the output is calculated by some **non-linear** sum of its inputs, the **activation function** (Sigmoid, Tanh, ReLu). It is important to give non-linarity to the model so it can learn to represent more complex non-linear mappings between inputs and outputs. Sometimes, a **bias** parameter is added to the sum to serve as a threshold to shift the activation function. For classification problems, the output layer will have the same number of nodes than the number of different classes. A **softmax** function is usually applied at the output to obtain a vector of probabilities that sum to 1. 
+
+<p align="center"><img src="assets/machineLearning/softmax.png" width="250px"/></p>
 
 The weights are initially set randomly (following a desired distribution). During learning process, the weights get adjusted after calculation of the error through a method called backpropagation. 
 
@@ -141,12 +143,35 @@ To see a **coding example** of a neural network in detail (including backpropaga
  
 
 ## 4. Convolutional Neural Networks (CNN) <a name="CNN"></a>
+As the name suggests, a basic CNN still uses the same architecture as the neural network we just studied. While CNNs are also part of deep learning which means new algorithms and more complex architectures, we could create a simple CNN only by changing the nodes of a neural network with convolutional **filters**. The main difference here is that the output of a filter usually has the same dimension as its input, compared to a NN node which always returns a scalar. 
 
-  
+A 2D filter 3x3 will have 9 weights (parameters) to adjust during training. A convolution layer will have a few hyperparameters such as the number of filters, their shape, their initial state, their stride (pixel stepping), zero-padding.
 
+<p align="center"><img src="assets/machineLearning/convolution.png" width="450px"/></p>
+A convolutional filter always has the same depth as the input tensor. The filter is moved accross the image and the output value is calculated at each step. Here is a visualisation for 8 filters of size 5x5 over an RGB image: 
+<p align="center"><img src="assets/machineLearning/singlefilter.png" width="250px"/></p>
+<p align="center"><img src="assets/machineLearning/featuremaps.png" width="400px"/></p>
+This process will be done again a few times (number of convolutional layers) in **deep learning**. 
+
+<p align="center"><img src="assets/machineLearning/secondfilter.png" width="300px"/></p>
+This is the main idea behind deep learning...
+<p align="center"><img src="assets/machineLearning/baseidea.png" width="400px"/></p>
+Since convolution will keep the input shape (except for the contour), this usually leads to an excess in dimensionality. All CNNs fix this by adding intermediate **max pooling** (or average pooling) layers to down-sample the input representation. 
+
+<p align="center"><img src="assets/machineLearning/maxpooling.png" width="450px"/></p>
+This leads to an architecture that looks like this for the popular ***AlexNet*** CNN with 5 convolutional layers and 3 dense layers: 
+
+<p align="center"><img src="assets/machineLearning/alexNet.png" width="800px"/></p>
+*This image hides the other half of [AlexNet](https://iq.opengenus.org/architecture-and-use-of-alexnet/) used to run on 2 GPUs at the same time.*
+
+**Dense layers**, or fully-connected layers, are just the same as the neural network layers we just looked at. They are usually inserted at the end of a CNN to classify. We usually say that the convolutional layers act as a feature extractor, while the dense layers act as the classifier. Notice AlexNet's last output is a vector of length 1000 which means his network was used to classify images into 1000 different classes (bus, train, person, dog, etc.). 
+
+In deep learning, each feature layer usually reaches a deeper level of abstraction or complexity, from simple edges to actual objects. This is refered to **feature hierarchy**, and is better visualized:
+<p align="center"><img src="assets/machineLearning/hierarchy.png" width="500px"/></p>
 ----
 
-- add Deep Learning section ?
+## 5. Varieties and applications  ?
+- Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, )
 
 ## 5. Applications <a name="applications"></a>
 
@@ -161,8 +186,7 @@ To see a **coding example** of a neural network in detail (including backpropaga
 #### References
 
 [1] [Russell, Stuart J.](https://en.wikipedia.org/wiki/Stuart_J._Russell); [Norvig, Peter](https://en.wikipedia.org/wiki/Peter_Norvig) (2009). *Artificial Intelligence: A Modern Approach* (3rd ed.).
-
-
+[2] École d'hiver en apprentissage automatique (2019), Université Laval.
 
 -----
 
@@ -172,27 +196,8 @@ To see a **coding example** of a neural network in detail (including backpropaga
 
 -----
 
-----
-
-- Neural networks: perceptron, feature extraction, loss function, activation, back propagation
+## To do
 - Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, )
-
-
-- TODO: Notebook ML coding example. maybe try to use the same case-study to then compare NN, CNN, optimized CNN... see cats and dogs
-```
-
-#### The basis for supervised learning
-
-1. Data collection
-2. Data preparation
-3. **Model choice and training**
-4. Model evaluation
-5. Optimisation
-
-<p align="center"><img src="assets/machineLearning/supervised.png" width="600px"/></p>
-###### todo
-
-https://en.wikipedia.org/wiki/Supervised_learning#Algorithm_choice , see dimensionality reduction.
-
-
-```
+- Notebook ML coding example. maybe try to use the same case-study to then compare NN, CNN, optimized CNN... see cats and dogs
+- Metrics, confusion matrix
+- Pretrained networks, Transfer learning
