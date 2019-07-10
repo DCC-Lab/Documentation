@@ -11,8 +11,8 @@ The goal of this document is to give an introduction to the general concepts and
 1. [Introduction](#introduction)
    1. [Understanding the nomenclature](#nomenclature)
    2. [Branches of Machine Learning](#branches)
-2. [ML Components and Algorithms](#components)
-   1. [Predictors](#predictors)
+2. [ML Algorithms and Components](#algorithms)
+   1. [Algorithms and parameters](#algorithms)
    2. [Loss Function and Error](#error)
    3. [Training, validation and test](#training)
 3. [Neural Networks](#NN)
@@ -62,11 +62,19 @@ In image classification, supervised learning will extract features from the inpu
 
  
 
-## 2. ML Components and Algorithms <a name="components"></a>
+## 2. ML Algorithms and Components <a name="components"></a>
 
-### Predictors <a name="predictors"></a>
+### Algorithms and parameters <a name="algorithms"></a>
+There is a wide range of algorithms available and none of them works best for all problems. Sometimes called a predictor, the algorithm will usually learn to optimize a prediction function `h` with parameters `θ` to optimize during training (if **parametric**). Here is a visual list of the most popular ones:
 <p align="center"><img src="assets/machineLearning/predictors.png"/></p>
-- [ ]  talk about parameters (optimized during training), hyperparameters (initial architecture and parameters learning rate, etc...), capacity (or ability to aquire complexity). 
+It is important to note that not all algorithms are parametric. Like the simple *k-nearest neighbors* algorithm that is intentiated with a chosen number of neighbors to look at in order to infer the value of a new input. In this case, `k` is called an hyperparameter. In machine learning, an **hyperparameter** is a parameter whose value is set before the learning process begins, while parameters are defined during training. In the coding process, hyperparameters are passed in as arguments to the constructor of the model class. 
+
+Some examples of hyperparameters include loss function, regularization, learning rate, number of leaves in a tree, number of hidden layers in a neural network, number of clusters in clustering techniques... 
+
+#### Capacity
+An important property of a machine learning algorithm is its **capacity**. The capacity of a model describes how complex a relationship it can model, although the term is loosely defined and cannot really be quantified. Conceptually, capacity represents the number of functions that a machine learning model can select as a possible solution. A general rule is that the more parameters a model has, the higher is its capacity. A low capacity model faced with a complex task will tend to underfit (high training error). On the other end, a high capacity model applied to a simple task might overfit (low training error, but high validation and test error). A model will often include a regularization function that will increase the loss with the increase in complexity to limit overfitting. 
+<p align="center"><img src="assets/machineLearning/complexity.png" width="450px"/></p>
+
 
 ### Loss Function and Error <a name="error"></a>
 
@@ -75,19 +83,15 @@ The empiric error `R_emp` corresponds to the mean of the loss calculated at each
 We could go deep into machine learning components to better understand not only how they work but mainly how one can work *well* (which as been the source of development for new ML algorithms). The list can be exhausting and a little math-oriented, so we will leave that aside for now since we want to jump into deep learning for image analysis. For those interested in learning more about machine learning components, I would suggest following a simple notebook example taken from an ML course: `MLComponentsAndAlgorithms.ipynb`.
 
 ### Training, validation and test <a name="training"></a>
-- [ ] Talk about training procedure, error, gradient, back propagation (a little), epochs, validation, over-fitting (training error curve with epoch), testing...
-
+The **training** procedure involves providing an ML algorithm with training data to learn from. For each sample, the model gives a prediction, calculates its error and the gradient. It then update its parameters directly (or through back-propagation) following a gradient descent. Usually you cannot load the whole training data at once so we feed the data to the model in **batches**. Once the model has seen all the data, we have completed what is called an **epoch** (or iteration). This procedure will usually have to be carried multiple times for succesful training, hence multiple epochs. 
+<p align="center"><img src="assets/machineLearning/epochs.jpg" width="300px"/></p>
+The dataset is always **split** into training and test (usually around 80% training ratio). The **test** set is put on hold for final testing. Meanwhile during the training, a part of the training set is used for **validation** in-between epochs to measure overfitting. Validation set is usually obtained by taking 20% of the training data (or through a cross-validation technique). 
 <p align="center"><img src="assets/machineLearning/holdout.png" width="450px"/></p>
-The dataset is always split into training and test (usually around 80% training ratio). The test set is put on hold for final testing. Meanwhile during the training, a part of the training set is used for validation in-between epochs to measure over-fitting (complexity of the model). Validation set is usually obtained by taking 20% of the training data (or by k-fold cross-validation technique [*link*]). 
-
-Training and validation errors give a biased approximation of the risk of the model, while the test error gives an approximation of the risk that is not biased. 
-
----
-
-
+Training and validation errors give a **biased** approximation of the risk of the model, while the test error gives an approximation of the risk that is not biased. 
 
 
 ## 3. Neural Networks <a name="NN"></a>
+
 After all the subjects we presented, we will focus our attention on supervised learning for classification, which is clearly the subject of interest for data analysis in science. To address the problem of classification, we will discuss two popular machine learning algorithms (*predictors*) suited for the task : the "simple" neural networks and the deep learning approach (mainly CNN). 
 
 *An interesting and exhausting list of all the popular machine learning algorithms and predictors is also available [here](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/).*
@@ -131,13 +135,12 @@ class Perceptron(object):
 ### Multi-layer NN  <a name="multi"></a>
 
 <p align="center"><img src="assets/machineLearning/NN.png" width="450px"/></p>
-
 ```python
 """ Code example of a multi-layer neural network """
 
-"""TODO
-maybe try to use the same case-study to then compare [Perceptron: nope since its binary...], NN, CNN, optimized CNN...
-"""
+# TODO
+
+# maybe try to use the same case-study to then compare [Perceptron: nope since its binary...], NN, CNN, optimized CNN...
 ```
 
 ----
@@ -193,7 +196,7 @@ A good way to better understand supervised learning is to jump into the inner wo
 5. Optimisation
 
 <p align="center"><img src="assets/machineLearning/supervised.png" width="600px"/></p>
-##### todo
+###### todo
 
 https://en.wikipedia.org/wiki/Supervised_learning#Algorithm_choice , see dimensionality reduction.
 
