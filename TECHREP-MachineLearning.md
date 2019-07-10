@@ -18,7 +18,7 @@ The goal of this document is to give an introduction to the general concepts and
 3. [Neural Networks](#NN)
    1. [Perceptron](#perceptron)
    2. [Neural Network](#multi)
-4. [Deep Learning](#DL)
+4. [Convolutional Neural Networks](#CNN)
 5. [Applications](#applications)
 -----
 
@@ -74,8 +74,6 @@ Some examples of hyperparameters include loss function, regularization, learning
 #### Capacity
 An important property of a machine learning algorithm is its **capacity**. The capacity of a model describes how complex a relationship it can model, although the term is loosely defined and cannot really be quantified. Conceptually, capacity represents the number of functions that a machine learning model can select as a possible solution. A general rule is that the more parameters a model has, the higher is its capacity. A low capacity model faced with a complex task will tend to underfit (high training error). On the other end, a high capacity model applied to a simple task might overfit (low training error, but high validation and test error). A model will often include a regularization function that will increase the loss with the increase in complexity to limit overfitting. 
 <p align="center"><img src="assets/machineLearning/complexity.png" width="450px"/></p>
-
-
 ### Loss Function and Error <a name="error"></a>
 
 The empiric error `R_emp` corresponds to the mean of the loss calculated at each point with a chosen loss function `L(y, ŷ)` (usually either absolute error `|y-ŷ|` or quadratic error in regression, or cross entropy in classification) where `ŷ` is our prediction given by our predictor `h` with parameters `θ`. The predictor in our case is the neural network, while the parameters correspond to the weigths of its hidden layers. These parameters are optimized during training. 
@@ -92,7 +90,7 @@ Training and validation errors give a **biased** approximation of the risk of th
 
 ## 3. Neural Networks <a name="NN"></a>
 
-After all the subjects we presented, we will focus our attention on supervised learning for classification, which is clearly the subject of interest for data analysis in science. To address the problem of classification, we will discuss two popular machine learning algorithms (*predictors*) suited for the task : the "simple" neural networks and the deep learning approach (mainly CNN). 
+After all the subjects we presented, we will focus our attention on supervised learning for classification, which is clearly the subject of interest for data analysis in science. To address the problem of classification, we will discuss two popular machine learning algorithms (*predictors*) suited for the task : the "simple" neural networks and the deep learning approach (mainly CNN). We will first introduce ourselves to the topic of neural networksby looking at the (very limited) perceptron. 
 
 *An interesting and exhausting list of all the popular machine learning algorithms and predictors is also available [here](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/).*
 
@@ -101,9 +99,7 @@ After all the subjects we presented, we will focus our attention on supervised l
 The simplest neural network format is called a Perceptron and consists of a single input layer connected to their corresponding weights. A weighted sum is then calculated and fed into a step function. This *linear binary classifier* can be used to say whether or not an input belongs to some specific class. We can generally say that a perceptron is a single-layer neural network. 
 
 <p align="center"><img src="assets/machineLearning/perceptron.png" width="450px"/></p>
-##### Code example `perceptron.py` 
-
-[Simple python perceptron from Thomas Countz](https://medium.com/@thomascountz/19-line-line-by-line-python-perceptron-b6f113b161f3)
+To see a **coding example** of a simple perceptron I recommend looking at the [code and explanation by Thomas Countz](https://medium.com/@thomascountz/19-line-line-by-line-python-perceptron-b6f113b161f3) :
 
 ```python
 import numpy as np
@@ -132,28 +128,25 @@ class Perceptron(object):
                 
 ```
 
-### Multi-layer NN  <a name="multi"></a>
-
+### Neural Network (multi-layer)  <a name="multi"></a>
 <p align="center"><img src="assets/machineLearning/NN.png" width="450px"/></p>
-```python
-""" Code example of a multi-layer neural network """
+A neural network usually differs from the perceptron by having at least one hidden layer. A neural network has **nodes** (neurons) and **edges** (connections). Each node and edge usually has an associated **weight** (parameter) that is tuned during learning process. The weight changes the strength of the signal at a connection. For each hidden node, the output is calculated by some **non-linear** sum of its inputs, the **activation function** (Sigmoid, Tanh, ReLu). It is important to give non-linarity to the model so it can learn to represent more complex non-linear mappings between inputs and outputs. Sometimes, a **bias** parameter is added to the sum to serve as a threshold to shift the activation function. 
 
-# TODO
+The weights are initially set randomly (following a desired distribution). During learning process, the weights get adjusted after calculation of the error through a method called backpropagation. 
 
-# maybe try to use the same case-study to then compare [Perceptron: nope since its binary...], NN, CNN, optimized CNN...
-```
+To see a **coding example** of a neural network in detail (including backpropagation), I recommend looking at the [code and explanation by Samay Shamdasani](https://enlight.nyc/projects/neural-network/)
 
-----
+---
 
+ 
 
-
-## 4. Deep Learning <a name="DL"></a>
+## 4. Convolutional Neural Networks (CNN) <a name="CNN"></a>
 
   
 
 ----
 
-
+- add Deep Learning section ?
 
 ## 5. Applications <a name="applications"></a>
 
@@ -184,8 +177,9 @@ class Perceptron(object):
 - Neural networks: perceptron, feature extraction, loss function, activation, back propagation
 - Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, )
 
-A good way to better understand supervised learning is to jump into the inner workings of its model: in this case, a "simple" fully-connected neural network. 
 
+- TODO: Notebook ML coding example. maybe try to use the same case-study to then compare NN, CNN, optimized CNN... see cats and dogs
+```
 
 #### The basis for supervised learning
 
@@ -200,3 +194,5 @@ A good way to better understand supervised learning is to jump into the inner wo
 
 https://en.wikipedia.org/wiki/Supervised_learning#Algorithm_choice , see dimensionality reduction.
 
+
+```
