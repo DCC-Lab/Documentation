@@ -18,7 +18,12 @@ The goal of this document is to give an introduction to the general concepts and
 3. [Neural Networks](#NN)
    1. [Perceptron](#perceptron)
    2. [Neural Network](#multi)
-4. [Convolutional Neural Networks and Deep Learning](#CNN)
+4. [Convolutional Neural Networks](#CNN)
+   1. [Convolutional filters](#filters)
+   2. [Convolutional layers](#layer)
+   3. [Pooling layers](#pooling)
+   4. [Dense layers](#dense)
+   5. [Deep learning](#deep)
 5. [Applications](#applications)
 -----
 
@@ -133,7 +138,6 @@ class Perceptron(object):
 A neural network usually differs from the perceptron by having at least one hidden layer. A neural network has **nodes** (neurons) and **edges** (connections). Each node and edge usually has an associated **weight** (parameter) that is tuned during learning process. The weight changes the strength of the signal at a connection. For each hidden node (a perceptron on its own), the output is calculated by some **non-linear** sum of its inputs, the **activation function** (Sigmoid, Tanh, ReLu). It is important to give non-linarity to the model so it can learn to represent more complex non-linear mappings between inputs and outputs. Sometimes, a **bias** parameter is added to the sum to serve as a threshold to shift the activation function. For classification problems, the output layer will have the same number of nodes than the number of different classes. A **softmax** function is usually applied at the output to obtain a vector of probabilities that sum to 1. 
 
 <p align="center"><img src="assets/machineLearning/softmax.png" width="250px"/></p>
-
 The weights are initially set randomly (following a desired distribution). During learning process, the weights get adjusted after calculation of the error through a method called backpropagation. 
 
 To see a **coding example** of a neural network in detail (including backpropagation), I recommend looking at the [code and explanation by Samay Shamdasani](https://enlight.nyc/projects/neural-network/)
@@ -143,28 +147,44 @@ To see a **coding example** of a neural network in detail (including backpropaga
  
 
 ## 4. Convolutional Neural Networks (CNN) <a name="CNN"></a>
+
+### Convolutional filters<a name="filters"></a>
+
 As the name suggests, a basic CNN still uses the same architecture as the neural network we just studied. While CNNs are also part of deep learning which means new algorithms and more complex architectures, we could create a simple CNN only by changing the nodes of a neural network with convolutional **filters**. The main difference here is that the output of a filter usually has the same dimension as its input, compared to a NN node which always returns a scalar. 
 
-A 2D filter 3x3 will have 9 weights (parameters) to adjust during training. A convolution layer will have a few hyperparameters such as the number of filters, their shape, their initial state, their stride (pixel stepping), zero-padding.
+A 2D filter 3x3 will have 9 weights (parameters) to adjust during training. 
 
 <p align="center"><img src="assets/machineLearning/convolution.png" width="450px"/></p>
 A convolutional filter always has the same depth as the input tensor. The filter is moved accross the image and the output value is calculated at each step. Here is a visualisation for 8 filters of size 5x5 over an RGB image: 
 <p align="center"><img src="assets/machineLearning/singlefilter.png" width="250px"/></p>
+### Convolutional layers <a name="layer"></a>
+
+A convolution layer is simply defined by having multiple filters that will move accross the input to each generate a feature map representation. A convolutional layer will have a few hyperparameters such as the number of filters, their shape, their initial state, their stride (pixel stepping: usually 1), zero-padding.
+
+
+
 <p align="center"><img src="assets/machineLearning/featuremaps.png" width="400px"/></p>
-This process will be done again a few times (number of convolutional layers) in **deep learning**. 
+
+This process will be done again a few times (number of convolutional layers) in deep learning. 
 
 <p align="center"><img src="assets/machineLearning/secondfilter.png" width="300px"/></p>
 This is the main idea behind deep learning...
 <p align="center"><img src="assets/machineLearning/baseidea.png" width="400px"/></p>
-Since convolution will keep the input shape (except for the contour), this usually leads to an excess in dimensionality. All CNNs fix this by adding intermediate **max pooling** (or average pooling) layers to down-sample the input representation. 
+### Pooling layers<a name="pooling"></a>
+
+Since convolution will keep the input shape (except for the contour), this usually leads to an excess in dimensionality. All CNNs fix this by adding intermediate max pooling (or average pooling) layers to down-sample the input representation. 
 
 <p align="center"><img src="assets/machineLearning/maxpooling.png" width="450px"/></p>
+### Dense layers<a name="dense"></a>
+
+A dense layer, or fully-connected layer, is just a regular layer of neurons in a neural network, as we just looked at. They are usually inserted at the end of a CNN to classify. We usually say that the convolutional layers act as a feature extractor, while the dense layers act as the classifier. Notice that the output of the following *AlexNet* CNN is a vector of length 1000 which means his network was used to classify images into 1000 different classes (bus, train, person, dog, etc.). 
+
+### Deep learning <a name="deep"></a>
+
 This leads to an architecture that looks like this for the popular ***AlexNet*** CNN with 5 convolutional layers and 3 dense layers: 
 
 <p align="center"><img src="assets/machineLearning/alexNet.png" width="800px"/></p>
 *This image hides the other half of [AlexNet](https://iq.opengenus.org/architecture-and-use-of-alexnet/) used to run on 2 GPUs at the same time.*
-
-**Dense layers**, or fully-connected layers, are just the same as the neural network layers we just looked at. They are usually inserted at the end of a CNN to classify. We usually say that the convolutional layers act as a feature extractor, while the dense layers act as the classifier. Notice AlexNet's last output is a vector of length 1000 which means his network was used to classify images into 1000 different classes (bus, train, person, dog, etc.). 
 
 In deep learning, each feature layer usually reaches a deeper level of abstraction or complexity, from simple edges to actual objects. This is refered to **feature hierarchy**, and is better visualized:
 <p align="center"><img src="assets/machineLearning/hierarchy.png" width="500px"/></p>
