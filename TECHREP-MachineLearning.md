@@ -34,6 +34,7 @@ The goal of this document is to give an introduction to the general concepts and
 ### Understanding the nomenclature <a name="nomenclature"></a>
 
 <p align="center"><img src="assets/machineLearning/categories.png" width="400px" /></p>
+
  **Artificial intelligence** is used to describe machines that mimic "cognitive" functions that humans associate with the human mind, such as "learning" and "problem solving" [1]. This general domain contains image processing, cognitive science, machine learning, neural networks and much more. **Machine learning** on its end is a more specific subject of AI that nowadays encapsulates almost all AI research topics. Its core idea is that the computer does not just use a pre-written algorithm, but learns how to solve the problem itself. 
 
 &nbsp;
@@ -49,14 +50,17 @@ In traditional programming you hard code the behavior of the program. In machine
 ### Branches of Machine Learning <a name="branches"></a>
 
 <p align="center"><img src="assets/machineLearning/MLtypes.PNG" width="800px" /></p>
+
 **Reinforcement learning** is about optimizing a decision making policy with experiences and rewards. It focuses on finding a balance between exploration of territory and exploitation of current knowledge. 
 
 *[Example](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html): the agent has to decide between two actions - moving the cart left or right - so that the pole attached to it stays upright*
 
 <p align="center"><img src="assets/machineLearning/RLcartpole.gif" width="400px"/></p>
+
 **Supervised learning** tries to learn a function that maps an input to an output based on a learning process over training examples. In supervised learning, each example is a *pair* consisting of an input object and a desired output value (labels). This topic divides into classification (hottest subject in machine learning) and regression (forecasts, predictions). 
 
 <p align="center"><img src="assets/machineLearning/class_regress.PNG" width="500px"/></p>
+
 **Unsupervised learning** helps to find unknown patterns in an input dataset without pre-existing labels to regroup inputs into clusters, reduce the number of dimensions or simplify a vast input into a few principle components. The main methods used in unsupervised learning are principal component and cluster analysis. 
 
 <p align="center"><img src="assets/machineLearning/clustering.png" width="500px"/></p>
@@ -79,6 +83,7 @@ Some examples of hyperparameters include loss function, regularization, learning
 #### Capacity
 An important property of a machine learning algorithm is its **capacity**. The capacity of a model describes how complex a relationship it can model, although the term is loosely defined and cannot really be quantified. Conceptually, capacity represents the number of functions that a machine learning model can select as a possible solution. A general rule is that the more parameters a model has, the higher is its capacity. A low capacity model faced with a complex task will tend to underfit (high training error). On the other end, a high capacity model applied to a simple task might overfit (low training error, but high validation and test error). A model will often include a regularization function that will increase the loss with the increase in complexity to limit overfitting. 
 <p align="center"><img src="assets/machineLearning/complexity.png" width="450px"/></p>
+
 ### Loss Function and Error <a name="error"></a>
 
 The empiric error `R_emp` corresponds to the mean of the loss calculated at each point with a chosen loss function `L(y, ŷ)` (usually either absolute error `|y-ŷ|` or quadratic error in regression, or cross entropy in classification) where `ŷ` is our prediction given by our predictor `h` with parameters `θ`. The predictor in our case is the neural network, while the parameters correspond to the weigths of its hidden layers. These parameters are optimized during training. 
@@ -150,18 +155,15 @@ To see a **coding example** of a neural network in detail (including backpropaga
 
 ### Convolutional filters<a name="filters"></a>
 
-As the name suggests, a basic CNN still uses a somewhat similar architecture as the neural network we just studied, although CNNs usually go into deep learning which means new algorithms and more complex architectures. Still the main difference are the hidden layers: instead of having hundreds of nodes fully connected together, we use convolutional filters we could create a simple CNN only by changing the nodes of a neural network with convolutional **filters**. The main difference here is that the output of a filter usually has the same dimension as its input, compared to a NN node which always returns a scalar. 
-
-A 2D filter 3x3 will have 9 weights (parameters) to adjust during training. 
+As the name suggests, a basic CNN still uses a somewhat similar architecture as the neural network we just studied, even though CNNs usually go into deep learning which means new algorithms and more complex architectures. The main difference are the hidden layers: instead of having hundreds of nodes fully connected together, we use a 'few' convolutional **filters** that are all moved accross the input image to create their own representation. The output of a filter usually has the same dimension as its input, compared to a NN node which always returns a scalar. Following this, a 2D filter 3x3 will have 9 weights (parameters) to adjust during training, but since it is not fully connected to all pixels, this generates a lot less parameters in the end, compared to neural networks. 
 
 <p align="center"><img src="assets/machineLearning/convolution.png" width="450px"/></p>
 A convolutional filter always has the same depth as the input tensor. The filter is moved accross the image and the output value is calculated at each step. Here is a visualisation for 8 filters of size 5x5 over an RGB image: 
 <p align="center"><img src="assets/machineLearning/singlefilter.png" width="250px"/></p>
+
 ### Convolutional layers <a name="layer"></a>
 
 A convolution layer is simply defined by having multiple filters that will move accross the input to each generate a feature map representation. A convolutional layer will have a few hyperparameters such as the number of filters, their shape, their initial state, their stride (pixel stepping: usually 1), zero-padding.
-
-
 
 <p align="center"><img src="assets/machineLearning/featuremaps.png" width="400px"/></p>
 
@@ -170,11 +172,13 @@ This process will be done again a few times (number of convolutional layers) in 
 <p align="center"><img src="assets/machineLearning/secondfilter.png" width="300px"/></p>
 This is the main idea behind deep learning...
 <p align="center"><img src="assets/machineLearning/baseidea.png" width="400px"/></p>
+
 ### Pooling layers<a name="pooling"></a>
 
 Since convolution will keep the input shape (except for the contour), this usually leads to an excess in dimensionality. All CNNs fix this by adding intermediate max pooling (or average pooling) layers to down-sample the input representation. 
 
 <p align="center"><img src="assets/machineLearning/maxpooling.png" width="450px"/></p>
+
 ### Dense layers<a name="dense"></a>
 
 A dense layer, or fully-connected layer, is just a regular layer of neurons in a neural network, as we just looked at. They are usually inserted at the end of a CNN to classify. We usually say that the convolutional layers act as a feature extractor, while the dense layers act as the classifier. Notice that the output of the following *AlexNet* CNN is a vector of length 1000 which means his network was used to classify images into 1000 different classes (bus, train, person, dog, etc.). 
