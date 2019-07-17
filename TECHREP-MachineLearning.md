@@ -1,4 +1,4 @@
-# Machine Learning
+Machine Learning
 
 The goal of this document is to give an introduction to the general concepts and theory around Machine Learning and its applications. 
 
@@ -15,6 +15,7 @@ The goal of this document is to give an introduction to the general concepts and
    1. [Algorithms and parameters](#algorithms)
    2. [Loss Function and Error](#error)
    3. [Training, validation and test](#training)
+   4. [Evaluation metrics](#metrics)
 3. [Neural Networks](#NN)
    1. [Perceptron](#perceptron)
    2. [Neural Network](#multi)
@@ -24,6 +25,7 @@ The goal of this document is to give an introduction to the general concepts and
    3. [Pooling layers](#pooling)
    4. [Dense layers](#dense)
    5. [Deep learning](#deep)
+   6. [Transfer learning](#transfer)
 5. [Applications](#applications)
 -----
 
@@ -91,6 +93,27 @@ The **training** procedure involves providing an ML algorithm with training data
 The dataset is always **split** into training and test (usually around 80% training ratio). The **test** set is put on hold for final testing. Meanwhile during the training, a part of the training set is used for **validation** in-between epochs to measure overfitting. Validation set is usually obtained by taking 20% of the training data (or through a cross-validation technique). 
 <p align="center"><img src="assets/machineLearning/holdout.png" width="450px"/></p>
 Training and validation errors give a **biased** approximation of the risk of the model, while the test error gives an approximation of the risk that is not biased. 
+
+### Evaluation metrics <a name="metrics"></a>
+
+To evaluate the performance of a model, different metrics are available depending on the type of the task. For regression problems, the metrics used are the popular R^2 and mean squared/absolute error. We will here look at a few different classification metrics: classification accuracy, area under ROC curve, confusion matrix and f1-score. 
+
+It is first useful to know the basic definitions for classification prediction results: 
+
+<p align="center"><img src="assets/machineLearning/metrics.png" width="400px"/></p>
+
+**Classification accuracy** is simply the percentage of correct predictions. This really is only suitable when there is an equal amount of observations for each class and that all predictions are equally important. 
+
+**Area under ROC curve** is a performance metric for binary classification problems that represents a model’s ability to discriminate between positive and negative classes. An area of 1.0 represents a model that made all predictions perfectly. An area of 0.5 represents a model as good as random. The ROC curve is created by plotting the true positive rate (*sensitivity*) against the false positive rate (*false-alarm* or 1-specificity) at various threshold settings. 
+
+<p align="center"><img src="assets/machineLearning/roc.jpg" width="450px"/></p>
+
+The **confusion matrix** is a nice presentation of the accuracy of a model over two or more classes. Prediction labels are on the X-axis while the actual outcome labels are on the Y-axis. Each cell contains the number of predictions (or percentage) made for a given confusion state. The diagonal represents correct predictions. The following confusion matrix was obtained for a hand written digit classification model over the MNIST dataset.
+
+<p align="center"><img src="assets/machineLearning/confusion.png" width="300px"/></p>
+
+From the confusion matrix a few metrics can be extracted for each class such as precision and sensitivity. The **precision** gives the performance for positive predictions, which is calculated using a prediction column in a confusion matrix. The **sensitivity** evaluates the performance of positive predictions for a ground-truth label. These two metrics are often used in conjunction. Depending on the problem, a weigthed average of precision and sensitivity, called the **F1-score**, may be prioritized. 
+
 
 
 ## 3. Neural Networks <a name="NN"></a>
@@ -197,12 +220,12 @@ For image data, it is common to reuse a model trained for the ImageNet classific
 
 ----
 
-## 5. Varieties and applications  ?
-- Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, )
+
 
 ## 5. Applications <a name="applications"></a>
 
-- [ ] talk about different data types and corresponding model or ML algorithms.  (**CNN** for images (UNet for semantic), LSTM, ) talk about data cleaning and preparation ? : ref to HOWTO-ML
+- [ ] Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, ) 
+- [ ] data cleaning and preparation ? : ref to HOWTO-ML
 - [ ] talk about examples ? alphaGo, self driving cars, image and speech recognition, forecast
 
 
