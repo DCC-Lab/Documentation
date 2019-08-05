@@ -1,4 +1,4 @@
-Machine Learning
+# Machine Learning
 
 The goal of this document is to give an introduction to the general concepts and theory around Machine Learning and its applications. 
 
@@ -101,17 +101,14 @@ To evaluate the performance of a model, different metrics are available dependin
 It is first useful to know the basic definitions for classification prediction results: 
 
 <p align="center"><img src="assets/machineLearning/metrics.png" width="400px"/></p>
-
 **Classification accuracy** is simply the percentage of correct predictions. This really is only suitable when there is an equal amount of observations for each class and that all predictions are equally important. 
 
 **Area under ROC curve** is a performance metric for binary classification problems that represents a model’s ability to discriminate between positive and negative classes. An area of 1.0 represents a model that made all predictions perfectly. An area of 0.5 represents a model as good as random. The ROC curve is created by plotting the true positive rate (*sensitivity*) against the false positive rate (*false-alarm* or 1-specificity) at various threshold settings. 
 
 <p align="center"><img src="assets/machineLearning/roc.jpg" width="450px"/></p>
-
 The **confusion matrix** is a nice presentation of the accuracy of a model over two or more classes. Prediction labels are on the X-axis while the actual outcome labels are on the Y-axis. Each cell contains the number of predictions (or percentage) made for a given confusion state. The diagonal represents correct predictions. The following confusion matrix was obtained for a hand written digit classification model over the MNIST dataset.
 
 <p align="center"><img src="assets/machineLearning/confusion.png" width="300px"/></p>
-
 From the confusion matrix a few metrics can be extracted for each class such as precision and sensitivity. The **precision** gives the performance for positive predictions, which is calculated using a prediction column in a confusion matrix. The **sensitivity** evaluates the performance of positive predictions for a ground-truth label. These two metrics are often used in conjunction. Depending on the problem, a weigthed average of precision and sensitivity, called the **F1-score**, may be prioritized. 
 
 
@@ -176,11 +173,19 @@ To see a **coding example** of a neural network in detail (including backpropaga
 As the name suggests, a basic CNN still uses a somewhat similar architecture as the neural network we just studied, even though CNNs usually go into deep learning which means new algorithms and more complex architectures. The main difference are the hidden layers: instead of having hundreds of nodes fully connected together, we use a 'few' convolutional **filters** that are all moved accross the input image to create their own representation. The output of a filter usually has the same dimension as its input, compared to a NN node which always returns a scalar. Following this, a 2D filter 3x3 will have 9 weights (parameters) to adjust during training, but since it is not fully connected to all pixels, this generates a lot less parameters in the end, compared to neural networks. 
 
 <p align="center"><img src="assets/machineLearning/convolution.png" width="450px"/></p>
-A convolutional filter always has the same depth as the input tensor. The filter is moved accross the image and the output value is calculated at each step. Here is a visualisation for 8 filters of size 5x5 over an RGB image: 
+A convolutional filter always has the same depth as the input tensor. The filter is moved accross the image and the output value is calculated at each step. Here is a visualisation for a filter of size 5x5 over an RGB image: 
 <p align="center"><img src="assets/machineLearning/singlefilter.png" width="250px"/></p>
+To keep the same dimension at output, a **zero-padding** can be added to the input image. To reduce dimension, we can tell the filter to step aside 2 pixels (**stride** of 2) at a time or more before computing the convolution. 
+
+|                         Padding = 1                          |                          Stride = 2                          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="assets/machineLearning/padding.gif" width="250px"/> | <img src="assets/machineLearning/stride.gif" width="250px"/> |
+
+
+
 ### Convolutional layers <a name="layer"></a>
 
-A convolution layer is simply defined by having multiple filters that will move accross the input to each generate a feature map representation. A convolutional layer will have a few hyperparameters such as the number of filters, their shape, their initial state, their stride (pixel stepping: usually 1), zero-padding.
+A convolution layer is simply defined by having multiple filters that will move accross the input to each generate their own feature map representation. A convolutional layer will have a few hyperparameters such as the number of filters, their shape, their initial state, their stride (pixel stepping: usually 1), zero-padding.
 
 <p align="center"><img src="assets/machineLearning/featuremaps.png" width="400px"/></p>
 This process will be done again a few times (number of convolutional layers) in deep learning. 
@@ -213,16 +218,17 @@ Transfer learning is a machine learning method where a model developed for a tas
 In transfer learning, the first step is to find a pre-trained model whose training data is somewhat similar to yours. Unless you have the same task, the model will surely need some tuning. This might only be about resetting the dense layers (classifier) with the appropriate number of classes. 
 
 <p align="center"><img src="assets/machineLearning/transfer_learning.jpg" width="500px"/></p>
-
 The convolutional layers are then freezed during training where you will be optimizing the dense layers weights to better suit your task. Depending on the (non-)similarity of your data to the pre-trained model's data, you might have to unfreeze a few convolutional layers at the head of the model. The more layers you tune, the more data you'll need, but the more accurate (and specific) it should become. 
 
 For image data, it is common to reuse a model trained for the ImageNet classification competition. These models would take days or weeks to train on modern hardware. 
 
 ----
 
-
+To see a **coding example** on deep learning in detail, I recommend looking at the [tutorial by Samay Shamdasani](
 
 ## 5. Applications <a name="applications"></a>
+
+
 
 - [ ] Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, ) 
 - [ ] data cleaning and preparation ? : ref to HOWTO-ML
