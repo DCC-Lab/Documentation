@@ -26,7 +26,6 @@ The goal of this document is to give an introduction to the general concepts and
    4. [Dense layers](#dense)
    5. [Deep learning](#deep)
    6. [Transfer learning](#transfer)
-5. [Applications](#applications)
 -----
 
  
