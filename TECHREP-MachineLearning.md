@@ -224,33 +224,19 @@ For image data, it is common to reuse a model trained for the ImageNet classific
 
 ----
 
-To see a **coding example** on deep learning in detail, I recommend looking at the [tutorial by Samay Shamdasani](
+To see a **coding example** on deep learning in detail, I recommend looking at the [tutorial by
+Dipanjan Sarkar](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a) or at its source code that I executed and commented on a [**jupyter notebook ML example**](https://github.com/DCC-Lab/Documentation/blob/master/assets/machineLearning/examples/catdogML.ipynb). 
 
-## 5. Applications <a name="applications"></a>
+&nbsp;
 
+&nbsp;
 
+----
 
-- [ ] Discuss the different DL architectures specfific for different kinds of task (**CNN** for images (UNet for semantic), LSTM, ) 
-- [ ] data cleaning and preparation ? : ref to HOWTO-ML
-- [ ] talk about examples ? alphaGo, self driving cars, image and speech recognition, forecast
-
-
-
-
-
+&nbsp;
 
 #### References
 
 [1] [Russell, Stuart J.](https://en.wikipedia.org/wiki/Stuart_J._Russell); [Norvig, Peter](https://en.wikipedia.org/wiki/Peter_Norvig) (2009). *Artificial Intelligence: A Modern Approach* (3rd ed.).
 [2] École d'hiver en apprentissage automatique (2019), Université Laval.
 
------
-
-----------
-
-###### Scratch
-
------
-
-## To do
-- Notebook ML coding example. maybe try to use the same case-study to then compare NN, CNN, optimized CNN... see cats and dogs
