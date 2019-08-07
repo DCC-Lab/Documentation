@@ -26,6 +26,8 @@ The goal of this document is to give an introduction to the general concepts and
    4. [Dense layers](#dense)
    5. [Deep learning](#deep)
    6. [Transfer learning](#transfer)
+5. [Deep Learning Example](#example)
+6. [Typical Procedure](#procedure)
 -----
 
  
@@ -226,7 +228,7 @@ For image data, it is common to reuse a model trained for the ImageNet classific
 
 ----
 
-### Deep Learning Coding Tutorial
+## Deep Learning Coding Tutorial<a name="example"></a>
 
 To see a **coding example** on deep learning in detail, I recommend looking at the [tutorial by
 Dipanjan Sarkar](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a) or at its source code that I executed and commented on a [**jupyter notebook ML example**](https://github.com/DCC-Lab/Documentation/blob/master/assets/machineLearning/examples/catdogML.ipynb). 
@@ -234,6 +236,34 @@ Dipanjan Sarkar](https://towardsdatascience.com/a-comprehensive-hands-on-guide-t
 <p align="center"><img src="assets/machineLearning/examples/catsDogs.gif" width="600px"/></p>
 
 &nbsp;
+
+----
+
+## Typical procedure<a name="procedure"></a>
+
+- Load data and labels
+  > Might have to resize images, apply filters...
+  > If its too big to load, think about writing a DataGenerator class.
+  
+- Split dataset into training, validation and test
+  > Usually around 60% training, 20% validation, 20% test.
+  > Make sure the data is different for each set
+  
+- Scale
+  > Simple normalization (remove minimum, divide by max value)
+  > Or StandardScale (unit-variance and zero-mean)
+  
+- Build the model
+  > Look at other models online, recycle, transfer learning if possible. 
+  > Compile with an appropriate loss function and optimizer for your problem. 
+
+- Train
+  > Batch size usually around 32, 64, 128.
+  > Use callbacks for early stopping, checkpoints. Then nb. of epochs can be anything high enough...
+
+- Evaluate on test set
+
+[**Keras Coding CheatSheet**](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf)
 
 &nbsp;
 
