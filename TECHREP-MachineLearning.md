@@ -222,10 +222,16 @@ The convolutional layers are then freezed during training where you will be opti
 
 For image data, it is common to reuse a model trained for the ImageNet classification competition. These models would take days or weeks to train on modern hardware. 
 
+&nbsp;
+
 ----
+
+### Deep Learning Coding Tutorial
 
 To see a **coding example** on deep learning in detail, I recommend looking at the [tutorial by
 Dipanjan Sarkar](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a) or at its source code that I executed and commented on a [**jupyter notebook ML example**](https://github.com/DCC-Lab/Documentation/blob/master/assets/machineLearning/examples/catdogML.ipynb). 
+
+<p align="center"><img src="assets/machineLearning/examples/catsDogs.gif" width="600px"/></p>
 
 &nbsp;
 
