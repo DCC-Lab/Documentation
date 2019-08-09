@@ -9,3 +9,4 @@ Sources/GUIDE-MicroscopeLightsheetBessel2photon/#main.synctex.gz
 Sources/GUIDE-MicroscopeLightsheetBessel2photon/#main.pdf
 assets/machineLearning/examples/dataset
 assets/machineLearning/examples/.ipynb_checkpoints/catdogML-checkpoint.ipynb
+*.h5
