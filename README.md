@@ -15,7 +15,7 @@ There is structure to our chaos. Filenames are strictly enforced for clarity. Fi
 1. *GUIDE*: Describes a system and how to use/troubleshoot it.
 2. *HOWTO*: Describes the **exact steps** to get something done, usually related to a computer but can be anything
 3. *PROTOCOL*: Describes the **technical steps** to complete a small task **in the laboratory**
-4. *TECHREP*: Explains or summarizes an article, book or general concepts
+4. *TECHREP*: Explains or summarizes an article, book, or general concepts
 
 A `Title` is anything informative and short.
 
