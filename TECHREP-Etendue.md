@@ -10,9 +10,7 @@ G = n^2A\Omega
 $$
 where *n* is the index of refraction of the medium, *A* is the cross-sectional area (normal to the direction of the propagation) and $\Omega$ is the solid angle that confines light crossing (or emitted from) the area (see figure below). 
 
-FIXME:
-
-![1565123951746](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565123951746.png)
+![EtendueVisualisation](assets/Etendue/EtendueVisualisation.png)
 
 _____________
 
@@ -25,11 +23,11 @@ $$
 $$
 where *A* is the spherical surface area and *r* is the radius of the sphere. Therefore, there are $4\pi$ steradians in a full sphere.
 
-![1565125474478](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565125474478.png)
+![SolidAngleSphere](assets/Etendue/SolidAngleSphere.png)
 
 We shall now calculate the solid angle of a cone with apex angle $2\theta$ and with its apex at the apex of the solid angle. 
 
-![1565186152653](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565186152653.png)
+![SolidAngleCone](assets/Etendue/SolidAngleCone.png)
 
 Considering a spherical cap, we get
 $$
@@ -46,7 +44,7 @@ _________
 
 For small angle $\theta$ (paraxial approximation) and with the assumption that object, image and pupils are perpendicular to the optical axis, we can relate etendue to the Lagrange invariant. The beam of light is assume to have a conical shape.
 
-![1565188721888](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565188721888.png)
+![ChiefAndMarginalRays](assets/Etendue/ChiefAndMarginalRays.png)
 
 **In an image or object plane :** 
 $$
@@ -74,7 +72,7 @@ A_s\Omega_s = A_i\Omega_i
 $$
 where $A_s$ is the source area, $\Omega_s$ is the solid angle subtended at the source by the entrance aperture of the optical system, $A_i$ is the image area and $\Omega_i$ is the solid angle subtended at the image by the exit aperture (see figure below).
 
-![1565190660927](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565190660927.png)
+![GeneralOpticalSystem](assets/Etendue/GeneralOpticalSystem.png)
 
 If the optical system is a 4f system with a magnification $\mathcal{M}$ and source has a radius $r_s$ and a numerical aperture NA$_s$, we have
 $$
@@ -94,7 +92,7 @@ We note that the second line is simply the optical invariant, which corresponds 
 
 ### Free space
 
-![1565200834684](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565200834684.png)
+![FreeSpace](assets/Etendue/FreeSpace.png)
 
 In free space (in a medium with $n=1$), the conservation of etendue is simple to prove.  With the assumptions that $d >> r_1$ and $d >> r_2$, we have
 $$
@@ -110,7 +108,7 @@ A complete proof for a general area shape can be found [here](https://en.wikiped
 
 ### Refractions and reflections
 
-![1565201866556](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565201866556.png)
+![RefractionEtendue](assets/Etendue/RefractionEtendue.png)
 
 Etendue is also conserved in refractions and reflections, but the refractive index must be taken into account. In fact, the conservation of etendue is given by
 $$
@@ -125,7 +123,7 @@ Suppose we have an objective lens with a numerical aperture $\text{NA} = n\sin\b
 
 
 
-![1565360445827](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565360445827.png)
+![ObjectiveLens](assets/Etendue/ObjectiveLens.png)
 
 **With etendue :**
 
@@ -180,7 +178,7 @@ This is the exact same equation that was derived in the previous section with th
 
 Since the refractive index of the entrance medium ($n = 1$) is different than the one of the output medium  $n$, the focal lengths are different on each side of the objective lens. Therefore, we need to calculate the focal length on the medium $n$ side using a parallel ray ($\theta = 0°$) and calculating the distance between the second principal plane and the place where this ray cross the axis. Suppose the objective has a focal length $f_2$ on the medium $n$ side, a working distance $W$ and that the distance between the second principal plane and the physical surface of the objective is $d$.
 
-![1565632420122](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565632420122.png)
+![ObjectivePlanes](assets/Etendue/ObjectivePlanes.png)
 
 The rays equations are given by the resolution of the system's ABCD matrix (from one focal plane to the other) :
 $$
@@ -272,7 +270,7 @@ which is the same answer we obtained in the two previous sections.
 
 We want to know the minimum entrance angle $\alpha$ that can satisfy the etendue needed at the specimen with this objective.
 
-![1565356402197](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565356402197.png)
+![RayTracingObjective](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565356402197.png)
 
 MVPlapo 2XC Olympus objective lens characteristics :
 
