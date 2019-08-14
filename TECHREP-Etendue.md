@@ -10,6 +10,8 @@ G = n^2A\Omega
 $$
 where *n* is the index of refraction of the medium, *A* is the cross-sectional area (normal to the direction of the propagation) and $\Omega$ is the solid angle that confines light crossing (or emitted from) the area (see figure below). 
 
+FIXME:
+
 ![1565123951746](C:\Users\maxen\AppData\Roaming\Typora\typora-user-images\1565123951746.png)
 
 _____________
