@@ -36,7 +36,7 @@ We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act o
 ## The practice
 
 1. The use of GitHub is mandatory.
-   Versioning allows one to modify the code with assurance and allows one    to give it to a collaborator as it was at the time of a publication. The dcclab group has a [page](https://github.com/DCC-Lab) on GitHub.
+   Versioning allows one to modify the code with assurance and allows one to give it to a collaborator as it was at the time of a publication. The dcclab group has a [page](https://github.com/DCC-Lab) on GitHub.
 
    *Code not on GitHub leads to papers not being published, memoires and theses not being read, and students not graduating.*
 
