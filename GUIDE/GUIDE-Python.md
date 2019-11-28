@@ -110,7 +110,6 @@ if isDone:
 else:
     print("Not done yet")
     
-    
 # You can also have if ... else if ... else if ... else ...
 a = 5
 if a < 0:
@@ -198,7 +197,7 @@ For instance, we can have a project where we need to manage a list of people.  A
 
 ```python
 class Person:
-  	# An __init__ function is defined to initialize the object and is usually
+  	# An __init__ function is defined to initialize the object
 		def __init__(firstName:str, lastName:str, dateOfBirthYYYYMMDD:(int, int, int), isMale:bool):
       	# self refers to "this object".  In this __init__ function,
         # self.firstName defines a variable that is included (i.e. kept) in Person
@@ -231,14 +230,25 @@ someone = Person(firstName = "Daniel", lastName="Côté", dateOfBirthYYYYMMDD=(1
 
 # One calls the function of that object with the variable name.function() syntax:
 print(someone.fullName()) # Will print Daniel Côté. Notice: variableName.function()
-print(someone.age()) # Will print 29 because I am 29. Will always be.
+print(someone.age()) # Will print 29 because I am 29. Always will be.
 ```
 
 The ability to define a class is an important feature of a language: not all languages allow it. 
 
-At this point, it is not important for you to know **how** to define classes, but rather to know that they **can** be defined.  When using other modules, made by other people, you will likely encounter classes and you will need to learn how to use them. 
+At this point, it is not important for you to know **how** to define classes, but rather to know that they **can** be defined.  When using other modules, made by other people, you will likely encounter classes and you will need to learn how to use them. Being able to program in an object-oriented manner (i.e. how to design good classes) is a skill in itself that must be learned and practiced. It takes time to master.
 
 # Python-specific programming
 
+1. You can start a Python interpreter by typing `python` in your Powershell (Windows) or Terminal (macOS, Linux). You can then type individual statements.
 
+<img src="GUIDE-Python.assets/image-20191128003033786.png" alt="image-20191128003033786" style="zoom: 50%;" />
+
+3. In loops, if-statements, class definitions, **indentation** is critical. There are no parentheses to indicate the block of block, it must be indented right.
+4. Many modules can be installed with Anaconda Navigator or pip with `pip install modulename`.
+
+<img src="GUIDE-Python.assets/image-20191128002900287.png" alt="image-20191128002900287" style="zoom:25%;" />
+
+5. Use an appropriate text editor like [Sublime Text](http://www.sublime.com), which will highlight the variables and functions properly if the name of the file you are editing ends with `.py`.
+
+   <img src="GUIDE-Python.assets/image-20191128002710361.png" alt="image-20191128002710361" style="zoom: 25%;" />
 
