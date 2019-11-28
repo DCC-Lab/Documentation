@@ -204,20 +204,20 @@ class Person:
         # Hence, self.firstName is the variable firstName in the object Person,
         # but firstName (without self. in front) is the variable that was 
         # passed as an argument
-      	self.firstName = firstName
-      	self.lastName = lastName
-				self.dateOfBirth = dateOfBirthYYYYMMDD
+        self.firstName = firstName
+        self.lastName = lastName
+        self.dateOfBirth = dateOfBirthYYYYMMDD
         self.isMale = isMale
 
     # Other functions can be defined at will
     def fullName() -> str:
-      	return self.firstName + " " +  self.lastName
+        return self.firstName + " " +  self.lastName
     
     def gender() -> str:
-      	if self.isMale:
-          	return "Male"
+        if self.isMale:
+            return "Male"
         else:
-          	return "Female"
+            return "Female"
           
     def age() -> float:
       	# Compute age from today's date and date of birth
