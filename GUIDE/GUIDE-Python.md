@@ -52,17 +52,15 @@ Python offers all of that.
 
 ## Examples
 
-1. Python is the language of choice at Google, and machine learning modules have been created (TensorFlow, PyTorch).
-2. Python is the underlying language for scripting at Apple and can create windows and display dialogs
-3. Very good image analysis, image segmentation modules exist and can be used by scientists.
-
-
+1. Very good image analysis, image segmentation modules exist and can be used by scientists.
+2. Python is the language of choice at Google, and machine learning modules have been created (TensorFlow, PyTorch).
+3. Python is the underlying language for scripting at Apple and can create windows and display dialogs
 
 # Basic programming
 
-Before diving into Python, we need to at least survey the most important building blocks of any programming language: variables, arrays, and other types,  condition-statements, for-loops, while-loops, , functions (with arugments and return values), classes.
+Before diving into Python, we need to at least survey the most important building blocks of any programming language: variables, arrays, and other types,  condition-statements, for-loops, while-loops, , functions (with arugments and return values), classes.  All languages have such structures, and it is  just a question of knowing the syntax for Python at this point.
 
-## Statement
+## Statements
 
 ```python
 # A statement is anything on a single line
@@ -100,7 +98,7 @@ otherTriplet = (1.0, 2, "Daniel") # Triplet made of three values of different ty
 someRange = range(5) # Returns an array with 5 values, starting at 0 [0,1,2,3,4]
 ```
 
-## If-statement
+## If-statements
 
 An `if-statement` will execute a block of indented code if a condition is true or another if a condition is false
 
@@ -112,11 +110,21 @@ if isDone:
 else:
     print("Not done yet")
     
+    
+# You can also have if ... else if ... else if ... else ...
+a = 5
+if a < 0:
+  print "Negative"
+elif a == 0:
+  print "Null"
+else a > 0:
+  print "Positive"
+    
 ```
 
-## For loops
+## For-loops
 
-The `for-loop` will execute the indented code `n` times, given by the number of elements in the array:
+The `for-loop` will execute the indented code `n` times, given by the number of elements in the array.
 
 ```python
 for index in [0,1,2,3]: # The variable index will take all values from the array
@@ -127,8 +135,9 @@ for index in [0,1,2,3]: # The variable index will take all values from the array
 # 2
 # 3
 
-for index in range(4):  # The variable index will take all values range(4)
-    print(index)        # Notice the print command is indented by 4-spaces
+for i in range(4):  # The variable i (you can choose anything) will 
+  									# take all values range(4)
+    print(i)        # Notice the print command is indented by 4-spaces
 # This will also print:
 # 0
 # 1
@@ -217,14 +226,19 @@ class Person:
         return 18
       
       
-# Someone could do this:
-daniel = Person(firstName = "Daniel", lastName="Côté", dateOfBirthYYYYMMDD=(1973,2,27), True)
+# You could do this:
+someone = Person(firstName = "Daniel", lastName="Côté", dateOfBirthYYYYMMDD=(1973,2,27), True)
 
-print(daniel.fullName()) # Will print Daniel Côté
-print(daniel.age()) # Will print 29 because I am 29.
+# One calls the function of that object with the variable name.function() syntax:
+print(someone.fullName()) # Will print Daniel Côté. Notice: variableName.function()
+print(someone.age()) # Will print 29 because I am 29. Will always be.
 ```
 
 The ability to define a class is an important feature of a language: not all languages allow it. 
+
+At this point, it is not important for you to know **how** to define classes, but rather to know that they **can** be defined.  When using other modules, made by other people, you will likely encounter classes and you will need to learn how to use them. 
+
+# Python-specific programming
 
 
 
