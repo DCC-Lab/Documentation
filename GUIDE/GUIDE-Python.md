@@ -33,7 +33,7 @@ import numpy
 # More code after this
 ```
 
-This allows people to package their code into a module, then distribute them through community-supported sites such as http://pipy.org. Anybody can create modules that can be used by others, and anybody can upload them on pypi.org, which has made Python a very dynamic language that becomes more powerful as people create new modules.
+This allows people to package their code into a module, then distribute them through community-supported sites such as http://pipy.org. Anybody can create modules that can be used by others, and anybody can upload them on pypi.org, which has made Python a very dynamic language that becomes more powerful as people create new modules. Many modules come from Python itself (`math`, `os`, `sys`, etc...) but you can get modules on http://pypi.org for instance and many other places. 
 
 As a comparison, Python modules are similar to MATLAB toolboxes that extend MATLAB.
 
