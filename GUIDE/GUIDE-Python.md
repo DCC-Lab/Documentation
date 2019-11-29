@@ -52,9 +52,21 @@ Python offers all of that.
 
 ## Examples
 
-1. Very good image analysis, image segmentation modules exist and can be used by scientists.
-2. Python is the language of choice at Google, and machine learning modules have been created (TensorFlow, PyTorch).
+1. Very good image analysis (`scipy`), image segmentation modules (`skimage`) exist and can be used by scientists.
+2. Python is the language of choice at Google, and machine learning modules have been created (`TensorFlow`, `PyTorch`).
 3. Python is the underlying language for scripting at Apple and can create windows and display dialogs
+
+
+
+# Installing Python
+
+The best option is to use [Anaconda](http://www.anaconda.com), which will install the latest Python version and many useful modules.  It makes managing Python on your platform simple. 
+
+## Troubleshooting
+
+It is fairly commong to end up with multiple versions of Python on one's computer. You may  install Python with Anaconda, or install it manually with other packages twice or even three times and end up with several copies.  On the command line, you will attempt to run Python with a given module but the module will not be available although you believe you have installed it already: this happens when the command-line uses a different version from the one you think you are using (say the system version versus Anaconda version). On macOS, you have the version from Apple (which cannot be removed), on many Linux versions you also have Python installed.
+
+The solution is to either remove the redundant version of Python or adjust your command-line path appropriately.
 
 # Basic programming
 
@@ -71,11 +83,21 @@ a = 1
 ## Types
 
 ```python
-int
-float
-bool
-tuple
-str
+a = 1
+type(a)
+#prints <class 'int'>
+a = 1.0
+#prints <class 'float'>
+a = True
+#prints <class 'bool'>
+a= (1,2)
+#prints <class 'tuple'>
+a = "Daniel"
+#prints <class 'str'>
+a = 'Daniel'
+#prints <class 'str'>
+a = [1,2,3]
+#prints <class 'list'>
 # and many others
 ```
 
@@ -159,8 +181,8 @@ while i < 4:
 isDone = False
 while not isDone:
     # Do something
-    isDone = computeStuffIncrementally() # May return True or False
-    
+    isDone = computeStuffIncrementally() # Some function that may return True or False
+
 ```
 
 ## Functions
@@ -168,12 +190,12 @@ while not isDone:
 A function can be defined to simplify the code.  It accepts arguments that can be named, can have default values, and their type can be indicated. The way to call a function is to use the name of the function and name its arguments.
 
 ```python
-def isGreaterThan10(someValue) -> bool: # Takes 1 argument (type is not known) returns 1 value (Boolean)
+def isGreaterThan10(someValue) -> bool: # Takes 1 argument (type is not known) returns 1 value (bool)
     if someValue > 10:
         return True
     return False
 
-def printSomething(name:str = "Unknown"): # Default value is "Unknown"
+def printSomething(name:str = "Unknown"): # Default value is "Unknown", returns nothing
     print(name) 
   
   
@@ -231,11 +253,19 @@ someone = Person(firstName = "Daniel", lastName="Côté", dateOfBirthYYYYMMDD=(1
 # One calls the function of that object with the variable name.function() syntax:
 print(someone.fullName()) # Will print Daniel Côté. Notice: variableName.function()
 print(someone.age()) # Will print 29 because I am 29. Always will be.
+
+someoneElse = Person(firstName = "Madeleine", lastName="Côté", dateOfBirthYYYYMMDD=(2007,4,1), False)
+
+# You can treat objects like anything else: make lists, etc... use them in functions
+group = [someone, someoneElse]
+
+
+
 ```
 
 The ability to define a class is an important feature of a language: not all languages allow it. 
 
-At this point, it is not important for you to know **how** to define classes, but rather to know that they **can** be defined.  When using other modules, made by other people, you will likely encounter classes and you will need to learn how to use them. Being able to program in an object-oriented manner (i.e. how to design good classes) is a skill in itself that must be learned and practiced. It takes time to master.
+At this point, it is not important for you to know **how** to define classes or **what** is a good class design, but rather to know that they **can** be defined.  When using other modules, made by other people, you will likely encounter classes and you will need to learn how to use them. Being able to program in an object-oriented manner (i.e. how to design good classes) is a skill in itself that must be learned and practiced. It takes time to master.
 
 # Python-specific programming
 
