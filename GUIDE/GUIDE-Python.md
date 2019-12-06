@@ -282,3 +282,113 @@ At this point, it is not important for you to know **how** to define classes or 
 
    <img src="GUIDE-Python.assets/image-20191128002710361.png" alt="image-20191128002710361" style="zoom: 25%;" />
 
+# First program: plotting data
+
+Let's start with a simple example: plotting data using `matplotlib`, a standard Python module to plot, visualize essentially anything scientifically relevant.
+
+We start by importing the modules we will need:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+We use the syntax `import ... as ...` so that we can refer to functions from `numpy` with `np` instead of the longer, tedious `numpy`.  It is common to `import numpy as np`. 
+
+We create two arrays, which are lists of floats. 
+
+```python
+x = np.linspace(0, 2, 100)
+yLinear = x
+yQuadratic = x**2
+yCubic = x**3	
+```
+
+
+1. We use `np.linspace()` because `range(x)` will only create a list of integers, and we want loating point values [0.0, 0.1, 0.2 etc...]
+2. `**` *means raised to the power of*
+3. We can then create very easily a y variable that has the same values, the 2nd power of y and the 3rd power of y.  Note that this is thanks to `numpy`: you cannot simply take the power of a list of numbers, but `numpy` has created an *array of numbers*-class that offers this functionality.
+
+Finally, we create our figure with its plots.
+
+```python
+fig = plt.figure()  # an empty figure with no axes
+plt.plot(x, yLinear, label='linear')
+plt.plot(x, yQuadratic, label='quadratic')
+plt.plot(x, yCubic, label='cubic')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.title("Simple Plot")
+plt.legend()
+plt.savefig("MyFigure.tiff",dpi=600)
+plt.savefig("MyFigure.pdf")
+plt.show()
+```
+
+The whole script is available below and can be [downloaded](./GUIDE-Python.assets/teachingMatplotlib.py). You run it with `python teachingMatplotlib.py`
+
+```python
+# name this: teachingMatplotlib.py
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 2, 100)   # An array of 100 numbers between 0 and 2
+yLinear = x       # y = x
+yQuadratic = x**2 # y = x*x
+yCubic = x**3     # y = x*x*x
+
+fig = plt.figure()  # an empty figure with no axes
+plt.plot(x, yLinear, label='linear') # Create first curve, with a label
+plt.plot(x, yQuadratic, label='quadratic')
+plt.plot(x, yCubic, label='cubic')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.title("Simple Plot")
+plt.legend() # Show legend
+plt.savefig("MyFigure.tiff",dpi=600) # Save the figure as high res tiff
+plt.savefig("MyFigure.pdf") # Save as a PDF, which is always high res
+plt.show()
+```
+
+You should obtain the following window:
+
+![screenshot1](GUIDE-Python.assets/screenshot1.png)
+
+## Note
+
+1. If you have errors, check the syntax.  If it complains about `matplotlib` or `numpy`, they may not be installed with your version of Python because you did not follow my instructions (did you?) to use Anaconda.
+
+2. Most importantly, you need to look up the documentation for `matplotlib`.  Read the [excellent tutorial](https://matplotlib.org/tutorials/index.html) to learn more. Much more.
+
+3. Notice that you can zoom and pan around the window with the buttons at the bottom left.  Click the home button to go back to a full view.  You can also save, however, the resolution will be that of the screen, which can only be qualified as "sucky".  Always save your figures directly in your script using a PDF extension, that is what the lines do:
+
+4. ```python
+   plt.savefig("MyFigure.tiff",dpi=600) # Save the figure as high res tiff
+   plt.savefig("MyFigure.pdf") # Save as a PDF, which is always high res
+   ```
+
+   
+
+
+
+# Second program: showing an image
+
+To show an image, we use the `PIL` module (Python Imaging Library).
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+import PIL
+
+image = PIL.Image.open("MyFigure.tiff") # Load an image from current directory
+image.show() # Show using the operating system facility
+
+imageAsArray = np.array(image) # You can also show the image using plot 
+plt.imshow(imageAsArray)       # but the image will have axes 
+plt.show()                     
+```
+
+
+
+#  Third program: modifying an image
+
