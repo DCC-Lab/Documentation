@@ -392,3 +392,35 @@ plt.show()
 
 #  Third program: modifying an image
 
+To modify an image, we convert it to an array, then refer to elements by elements to perform a calculation.  In the example below, we remove all channels, except the green channel from an RGB image:
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+import PIL
+
+image = PIL.Image.open("test2.png")
+imageAsArray = np.array(image)  # Now we can compute things 
+print("My image has a shape of:", imageAsArray.shape)
+
+(height, width, colours) = imageAsArray.shape 
+gfpChannel = np.zeros(shape=(height, width))
+for i in range(width):
+    for j in range(height):
+        gfpChannel[j][i] = imageAsArray[j][i][1] # Keep only 2nd channel (green)
+
+print("My new array is: ", gfpChannel.shape)
+print("Its first element is: ", gfpChannel[0][0])
+
+gfpImage = PIL.Image.fromarray(gfpChannel.astype('uint8')) # Convert to 8-bits PIL.Image
+gfpImage.save("GFPImage.jpg", "JPEG")  # Save as JPEG 
+
+
+```
+
+
+
+## Note
+
+1. Go to [PIL documentation](https://pillow.readthedocs.io/en/stable/) to read more.
+
