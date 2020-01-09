@@ -12,11 +12,7 @@ So: your username, the project name (only valid names, see below) and the date (
 
 ! [Image 20190614114449466] (assets / labdata.png)
 
-
-
-
-
-These data are accessible **universally** and **eternally,** **that is to say that once the data on caffeine, one cannot change their name or their location.** Consider this data as "des data from laboratory notebooks ", so nothing is erased.
+These data are accessible **universally** and **eternally,** **that is to say that once the data on caffeine, one cannot change their name or their location.** Consider this data as "data from laboratory notebooks ", so nothing should be deleted.
 
 To do this, you must use the following structure:
 
