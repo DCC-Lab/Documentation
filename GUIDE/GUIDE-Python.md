@@ -267,7 +267,9 @@ The ability to define a class is an important feature of a language: not all lan
 
 At this point, it is not important for you to know **how** to define classes or **what** is a good class design, but rather to know that they **can** be defined.  When using other modules, made by other people, you will likely encounter classes and you will need to learn how to use them. Being able to program in an object-oriented manner (i.e. how to design good classes) is a skill in itself that must be learned and practiced. It takes time to master.
 
-# Python-specific programming
+# Programming
+
+## Python details
 
 1. You can start a Python interpreter by typing `python` in your Powershell (Windows) or Terminal (macOS, Linux). You can then type individual statements.
 
@@ -282,7 +284,7 @@ At this point, it is not important for you to know **how** to define classes or 
 
    <img src="GUIDE-Python.assets/image-20191128002710361.png" alt="image-20191128002710361" style="zoom: 25%;" />
 
-# First program: plotting data
+## Plotting data
 
 Let's start with a simple example: plotting data using `matplotlib`, a standard Python module to plot, visualize essentially anything scientifically relevant.
 
@@ -354,7 +356,7 @@ You should obtain the following window:
 
 ![screenshot1](GUIDE-Python.assets/screenshot1.png)
 
-## Note
+### Note
 
 1. If you have errors, check the syntax.  If it complains about `matplotlib` or `numpy`, they may not be installed with your version of Python because you did not follow my instructions (did you?) to use Anaconda.
 
@@ -371,7 +373,7 @@ You should obtain the following window:
 
 
 
-# Second program: showing an image
+## Showing an image
 
 To show an image, we use the `PIL` module (Python Imaging Library).
 
@@ -423,4 +425,3 @@ gfpImage.save("GFPImage.jpg", "JPEG")  # Save as JPEG
 ## Note
 
 1. Go to [PIL documentation](https://pillow.readthedocs.io/en/stable/) to read more.
-
