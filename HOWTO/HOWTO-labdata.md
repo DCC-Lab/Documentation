@@ -1,5 +1,41 @@
 # Labdata: DCCLab data repository
 
+Archiving data is not only useful, it is essential for a serious laboratory. In order to ensure the sustainability of the data, we must agree to a standard to save our data on our disks (lab, personal, laptop, etc ...). With a simple nomenclature, anyone can access the data easily and we can archive it systematically. The server Cafeine2 is the main repository of the data produced by the group and to avoid total clutter, here is the nomenclature to follow.
+
+**Note: this is not a recommendation, but a mandatory method for all group members. You must copy your data every day to labdata.**
+
+Caffeine contains everyone's archives, in a folder that reads as follows:
+
+`/ Labdata / username / project / YYYYMMDD * /`
+
+So: your username, the project name (only valid names, see below) and the date (Year, Month and Day) and then what you want. Here is an example:
+
+! [Image 20190614114449466] (assets / labdata.png)
+
+These data are accessible **universally** and **eternally,** **that is to say that once the data on caffeine, one cannot change their name or their location.** Consider this data as "data from laboratory notebooks ", so nothing should be deleted.
+
+To do this, you must use the following structure:
+
+1. On all computers (laptop, desktop, lab), there must be a "**labdata**" directory (in lower case) in which all the data is saved. You can put it wherever you want.
+2. The structure is then "the name" of the user **in lowercase letters** (for your laptops and personal computers, you can skip this step, but for laboratory computers, indicate your name). **You must use the same spelling all the time** See below for the number of projects.
+3. Next, your projects, **in lower case letters**. Again, **you must use the same spelling all the time.** There are few projects in the group. There may already be one or more projects under your username, before creating a project, you must look on [this wiki page] (http://cafeine.crulrg.ulaval.ca/groups/cote/ wiki / 7642b / Names_and_projects_for_learning_of_data.html) or in your caffeine section at [http://cafeine.crulrg.ulaval.ca/labdata/oquer(http://cafeine.crulrg.ulaval.ca/labdata/(yourname)/ )
+4. Finally, when you do an experiment, or even an analysis, you must save in a folder whose name begins with the date in YYYYMMDD format then you can add whatever you want (such as: 20101029-WavelengthSwept_Test). You should avoid accents and /, if possible spaces (to avoid complicated URLs).
+5. Then you can name your files and remake folders as it is appropriate for what you are doing.
+6. Negotiable, but desirable: you should have a README.txt which indicates what the file contains.
+
+
+Next, you need to "synchronize" your computers with caffeine. Note:
+
+1. Synchronization should be done approximately once a day (before leaving in the evening or arriving in the morning).
+2. Once this synchronization is done, you can no longer rename files in your labdata. If you want to do this, it must be done before synchronization.
+3. There are tools to do this synchronization easily and quickly. rsync exists for Windows, Mac OS X and Unix. ** A WIki page ** [** will be created **] (http://cafeine.crulrg.ulaval.ca/groups/cote/wiki/8c93a/rsync_pour_tous.html) ** to explain the installation of rsync for each of the platforms [Please Volunteer] **.
+
+In your laboratory notebook, you can link to this data, which will end up on caffeine. You could write for example, "data in labdata at ws-cars / 20101029-Test /" without putting your name since your notebook belongs to you but you must put the project and the dated file.
+
+
+
+# Labdata: DCCLab data repository
+
 L'archivage des données n'est pas seulement utile, il est essentiel pour un laboratoire sérieux. Dans le but de s'assurer de la pérennité des données, nous devons avoir une convention pour sauvegarder nos données sur nos disques (laboratoire, personnel, portable, etc...). En ayant une nomenclature simple, n'importe qui pourra accéder aux données facilement et nous pourrons les archiver de façon systématique. Donc, Caféine aura la totalité des données qui proviendront des multiples ordinateurs du groupes, mais pour ce faire et éviter le fouilli total, voici la nomenclature à suivre.
 
 **Notez: ce n'est pas une recommandation, mais bien une méthode obligatoire pour tous les membres du groupe. Vous devez copier vos données à chaque jour sur labdata.**
