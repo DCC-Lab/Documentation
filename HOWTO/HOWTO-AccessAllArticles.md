@@ -6,7 +6,7 @@ Often, one must look for papers and articles on the web. Here's a simple explana
 2. Name this *favorite* something easy to understand and recognize: `getArticleAccess`
 3. Enter the following `javascript` code as the URL:
    `javascript:void(location.href="https://acces.bibl.ulaval.ca/login?url="+location.href)`
-4. Once one an article bank webpage or a journal's article page, click on your new favorite.
+4. Once on an article bank webpage or a journal's article page, click on your new favorite.
 5. Log into *monPortail*.
 6. Download your article's PDF.
 
