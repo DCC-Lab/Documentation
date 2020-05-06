@@ -14,10 +14,10 @@ Often, one must look for papers and articles on the web. Here's a simple explana
 
 Here's an example to help you visualize:
 
-![image-20200506164123447](C:\Users\marc-\AppData\Roaming\Typora\typora-user-images\image-20200506164123447.png)
+![image-20200506164123447](../assets/HOWTO-AccessAllArticles/image-20200506164123447.png)
 
 
 
-![image-20200506164219907](C:\Users\marc-\AppData\Roaming\Typora\typora-user-images\image-20200506164219907.png)
+![image-20200506164219907](../assets/HOWTO-AccessAllArticles/image-20200506164219907.png)
 
-![image-20200506164243538](C:\Users\marc-\AppData\Roaming\Typora\typora-user-images\image-20200506164243538.png)
+![image-20200506164243538](../assets/HOWTO-AccessAllArticles/image-20200506164243538.png)
