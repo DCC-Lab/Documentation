@@ -1,6 +1,6 @@
 # HOWTO - Python Virtual Environment (venv)
 
-In this tutorial, you will learn
+In this tutorial, you will learn:
 
 1. What is a virtual environment (venv)
 2. How to use a venv for python
