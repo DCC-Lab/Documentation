@@ -14,7 +14,7 @@ Le *versioning* est une méthode de travail qui s'exécute à l'aide *d'outils d
 2. Un historique des modifications est conservé et permet de retourner l'état des fichiers à un moment particulier,
 3. Un système de gestion des modifications est disponible
 
-Il existe plusieurs outils de versioning: `cvs`, ` subversion`,  `perforce`,  `git`. [Pour plusieurs raisons](https://news.ycombinator.com/item?id=17483083), `git` est devenu le standard. Pour faciliter la collaboration, des site web (GitHub, GitLab, GitBucket, etc...) mettent en place un serveur git où les gens peuvent s'inscrire pour conserver le code source.  GitHub est particulièrement bien fait et [est gratuit pour le monde académique](https://help.github.com/articles/applying-for-an-academic-research-discount/). C'est donc le choix qui s'impose aujourd'hui et c'est ce qui sera discuté.
+Il existe plusieurs outils de versioning: `cvs`, ` subversion`,  `perforce`,  `git`. [Pour plusieurs raisons](https://news.ycombinator.com/item?id=17483083), `git` est devenu le standard. Pour faciliter la collaboration, des site web (GitHub, GitLab, GitBucket, etc...) mettent en place un serveur git où les gens peuvent s'inscrire pour conserver le code source.  GitHub est particulièrement bien fait et [est gratuit pour le monde académique](https://help.github.com/articles/applying-for-an-academic-research-discount/). C'est donc le choix qui s'impose aujourd'hui et c'est ce qui sera discuté. **Le groupe DCClab ne prend que GitHub.**
 
 ### 1-2-3 Comment ça marche, le *versioning*?
 
@@ -32,7 +32,7 @@ Voici un exemple de journée de travail fait avec un logiciel de versioning dans
 
    3. Je retourne (*push*) l'ensemble de mes modifications dans le répertoire du serveur
 
-4. Si des collègues modifient le code, je demande (*pull*) au serveur les modifications les plus récentes.  Elles seront intégrées (*merged*)  normalement dans mon code sans que je ne fasse rien de particulier, à moins que deux personnes aient modifié exactement les mêmes lignes de code.
+4. Si des collègues modifient le code, je demande (*pull*) au serveur les modifications les plus récentes.  Elles seront intégrées (*merged*)  normalement dans mon code sans que je ne fasse rien de particulier, à moins que deux personnes n'aient modifié exactement les mêmes lignes de code.
 
 5. Lorsque j'ai terminé, tout le monde sur le même projet a accès aux modifications que j'ai fait.
 
@@ -40,30 +40,37 @@ Voici un exemple de journée de travail fait avec un logiciel de versioning dans
 
 ### Je veux travailler sur le code de *xyz*, qu'est-ce que je fais?
 
-1. Je trouve le code voulu sur GitHub et l'URL pour cloner:
+1. Je trouve le code voulu sur GitHub et l'URL pour cloner, c'est-à-dire faire une copie sur mon ordinateur:
 
-   ![image-20181203190825831](../assets/HOWTO-GitHub/image-20181203190825831.png)
+   <img src="../assets/HOWTO-GitHub/image-20181203190825831.png" alt="image-20181203190825831" style="zoom:25%;" />
 
-2. Dans l'application [GitHub](https://desktop.github.com), je clone: 
-   ![image-20181203190925136](../assets/HOWTO-GitHub/image-20181203190925136.png)
+2. Dans l'application [GitHub](https://desktop.github.com), je clone (i.e. je fais une copie locale): 
+
+   <img src="../assets/HOWTO-GitHub/image-20181203190925136.png" alt="image-20181203190925136" style="zoom:33%;" />
 
 3. Je copie l'URL voulu et je clique **Clone**:
-   ![image-20181203191201686](../assets/HOWTO-GitHub/image-20181203191201686.png)
+
+   <img src="../assets/HOWTO-GitHub/image-20181203191201686.png" alt="image-20181203191201686" style="zoom:33%;" />
 
 4. Je peux demander a GitHub de m'ouvrir le répertoire sur mon ordinateur une fois que la copie est terminée:
-   ![image-20181203191022532](../assets/HOWTO-GitHub/image-20181203191022532.png)
 
-5. Je commence à travailler en créant une branche ou en prenant un branche existante.
-   
-6. Je travaille avec les logiciels appropriés. J'édite les fichiers. Lorsque j'ai terminé, je **Commit** mes changements:
+   <img src="../assets/HOWTO-GitHub/image-20181203191022532.png" alt="image-20181203191022532" style="zoom:33%;" />
 
-   ![image-20181203191545484](../assets/HOWTO-GitHub/image-20181203191545484.png)
+5. Je commence à travailler en **créant une branche** ou en prenant un branche existante.
+
+6. Je travaille avec les logiciels appropriés. J'édite les fichiers. Lorsque j'ai terminé une tâche, je **Commit** mes changements:
+
+   <img src="../assets/HOWTO-GitHub/image-20181203191545484.png" alt="image-20181203191545484" style="zoom:33%;" />
 
 7. Si j'ai la permission sur ce **Repository**, je peux envoyer mes modifications (**Push**).
 
-   ![image-20181203191658308](../assets/HOWTO-GitHub/image-20181203191658308.png)
+   <img src="../assets/HOWTO-GitHub/image-20181203191658308.png" alt="image-20181203191658308" style="zoom: 33%;" />
 
-8. Je demande un Pull Request pour que quelqu'un revise mon code.  Si personne n'est associé à ce projet, je merge mon code moi-même mais j'utilise Pull request quand même pour retracer les actions.
+8. Lorsque j'ai terminé mon Projet, je demande "de me faire inclure dans le code principal" (Pull Request).
+
+   <img src="../assets/HOWTO-GitHub/pullRequest.png" alt="image-20210503123348315" style="zoom:33%;" />
+
+   1. Je demande un Pull Request pour que quelqu'un revise mon code.  Si personne n'est associé à ce projet, je merge mon code moi-même mais j'utilise Pull request quand même pour retracer les actions.
 
 
 
@@ -128,7 +135,7 @@ Here is an example of a working day done with a versioning software in its simpl
    [image-20181203191022532](assets/image-20181203191022532.png)
 
 5. I start work by creating a branch or taking an existing branch.
-   
+  
 6. I work with the appropriate software. I edit the files. When I'm done, I **commit** my changes:
 
    ![image-20181203191545484](../assets/HOWTO-GitHub/image-20181203191545484.png)
@@ -145,5 +152,4 @@ Here is an example of a working day done with a versioning software in its simpl
 
 1. Sign up for an account on [GitHub.com](https://github.com/join?source=experiment-header-dropdowns-home)
 2. Login to github.com
-
 
