@@ -58,6 +58,8 @@ Voici un exemple de journée de travail fait avec un logiciel de versioning dans
 
 5. Je commence à travailler en **créant une branche** ou en prenant un branche existante.
 
+   <img src="../assets/HOWTO-GitHub/newBranch.png" alt="image-20210503123912848" style="zoom:33%;" />
+
 6. Je travaille avec les logiciels appropriés. J'édite les fichiers. Lorsque j'ai terminé une tâche, je **Commit** mes changements:
 
    <img src="../assets/HOWTO-GitHub/image-20181203191545484.png" alt="image-20181203191545484" style="zoom:33%;" />
