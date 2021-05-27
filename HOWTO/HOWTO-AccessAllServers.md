@@ -54,7 +54,7 @@
 
 ## Network Diagram
 
-![dcc_network](.\HOWTO-GitHub.assets\dcc_network.png)
+![dcc_network](https://raw.githubusercontent.com/DCC-Lab/Documentation/master/HOWTO/HOWTO-GitHub.assets/dcc_network.png)
 
 ## IP Address catalog
 
