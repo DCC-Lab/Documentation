@@ -28,7 +28,7 @@ We all code in MATLAB, C, Python, Objective-C, Swift, C ++, assembler. The act o
 
 7. The best function has no argument. The second best function has only one argument. The third best function has only two arguments. There is no fourth best function.
 
-8. **Code without tests is incomplete code**. MATLAB has `UnitTest`. Python has `unitTest`. Swift and Objective-C have `XCTest`, C ++ has several libraries of Unit Testing. All languages now have test libraries (even LabView for goodness sake).
+8. **Code without tests is incomplete code**. MATLAB has `UnitTest`. Python has `unittest`. Swift and Objective-C have `XCTest`, C ++ has several libraries of Unit Testing. All languages now have test libraries (even LabView for goodness sake).
    Writing tests makes it possible to better understand and better factorize your own code, in addition to making it more reliable. It allows you to embark on big changes without being afraid of breaking something. Write tests.
 
 
