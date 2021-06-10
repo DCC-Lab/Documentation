@@ -36,6 +36,8 @@ Voici un exemple de journée de travail fait avec un logiciel de versioning dans
 
 5. Lorsque j'ai terminé, tout le monde sur le même projet a accès aux modifications que j'ai fait.
 
+Ce [court tutoriel](https://learngitbranching.js.org/) aide à maîtriser le *versioning* et le fonctionnement des branches.
+
 ## GitHub
 
 ### Je veux travailler sur le code de *xyz*, qu'est-ce que je fais?
@@ -118,6 +120,8 @@ Here is an example of a working day done with a versioning software in its simpl
 4. If colleagues change the code, I ask (*pull*) the server for the most recent changes.  They will be (*merged*) normally integrated into my code without me doing anything special, unless two people have changed exactly the same lines of code.
 
 5. When I'm done, everyone on the same project has access to the changes I've made.
+
+This [short tutorial](https://learngitbranching.js.org/) helps to understand *versioning* and how branches work.
 
 ## GitHub
 
