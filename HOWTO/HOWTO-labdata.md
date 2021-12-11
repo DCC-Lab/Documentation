@@ -6,7 +6,7 @@ Archiving data is not only useful, it is essential for a serious laboratory. In 
 
 Caffeine contains everyone's archives, in a folder that reads as follows:
 
-`/ Labdata / username / project / YYYYMMDD * /`
+`/ labdata / username / project / YYYYMMDD * /`
 
 So: your username, the project name (only valid names, see below) and the date (Year, Month and Day) and then what you want. Here is an example:
 
