@@ -26,11 +26,13 @@ You can connect to the AFP service (Apple File System) **FOR MAC**
 4. Enter the DCCLAB credentials
 5. You should now have a `read/write` access to `Goliath/labdata`
 
-![cafeine3_1](\HOWTO-GitHub.assets\cafeine3_1.png)
+![cafeine3_1](https://raw.githubusercontent.com/DCC-Lab/Documentation/master/HOWTO/HOWTO-GitHub.assets/cafeine3_1.png)
 
-![cafeine3_2](\HOWTO-GitHub.assets\cafeine3_2.png)![cafeine3_3](\HOWTO-GitHub.assets\cafeine3_3.png)
+![cafeine3_2](https://raw.githubusercontent.com/DCC-Lab/Documentation/master/HOWTO/HOWTO-GitHub.assets/cafeine3_2.png)
 
-![cafeine3_4](\HOWTO-GitHub.assets\cafeine3_4.png)
+![cafeine3_3](https://raw.githubusercontent.com/DCC-Lab/Documentation/master/HOWTO/HOWTO-GitHub.assets/cafeine3_3.png)
+
+![cafeine3_4](https://raw.githubusercontent.com/DCC-Lab/Documentation/master/HOWTO/HOWTO-GitHub.assets/cafeine3_4.png)
 
 
 
