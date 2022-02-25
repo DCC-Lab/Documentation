@@ -43,6 +43,6 @@ You can connect to the SMB service (SIMBA File System) **FOR Windows**
 1. Go to "My Computer / Ce PC"
 2. In the upper tab menu, click on "Computer/Ordinateur"
 3. Click on "Map a network drive / Connecter un lecteur réseau"
-4. Choose a drive letter and enter the server's address: `\\cafeine3.crulrg.ulaval.ca\dcclab`
+4. Choose a drive letter and enter the server's address: `\\cafeine3.crulrg.ulaval.ca\Public Directory\Goliath`
 5. Enter dcclab credentials (might have to create a new login account).
 6. You should now have access to Goliath as a drive on your computer.
