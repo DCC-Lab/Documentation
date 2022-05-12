@@ -2,7 +2,7 @@
 
 ## General Knowledge
 
-`cafeine3` is the main server of DCCLab where the data and website are. `Goliath` is the name of the very, very large disk (100TB) on the server. Inside `Goliath`, there's a folder where we keep **everything** : `/labdata`. More **important** info on labdata available [here](HOWTO-labdata.md).
+`cafeine3` is the main server of DCCLab where the data and websites are. There is no reason for anyone to connect to dccserver, which does not contain anything useful to the group (it is a server that manages other servers). `Goliath` is the name of the very, very large disk (100TB) on the server. Inside `Goliath`, there's a folder where we keep **everything** : `/labdata`. More **important** info on labdata available [here](HOWTO-labdata.md).
 
 - The simplest option: You should be able to connect via Windows/macOS/Linux easily with the standard tools (Connect to, Network Neighbouhood, etc...). Look for Cafeine3 and then Goliath.  Identify as 'dcclab' with the standard password. More details below.
 
