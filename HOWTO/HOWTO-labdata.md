@@ -14,14 +14,15 @@ So: your username, the project name (only valid names, see below) and the date (
 
 These data are accessible **universally** and **eternally,** **that is to say that once the data on caffeine, one cannot change their name or their location.** Consider this data as "data from laboratory notebooks ", so nothing should be deleted.
 
-To do this, you must use the following structure:
+To do this, you must use the following structure and rules:
 
 1. On all computers (laptop, desktop, lab), there must be a "**labdata**" directory (in lower case) in which all the data is saved. You can put it wherever you want.
-2. The structure is then "the name" of the user **in lowercase letters** (for your laptops and personal computers, you can skip this step, but for laboratory computers, indicate your name). **You must use the same spelling all the time** See below for the number of projects.
-3. Next, your projects, **in lower case letters**. Again, **you must use the same spelling all the time.** There are few projects in the group. There may already be one or more projects under your username, before creating a project, you must look on [this wiki page] (http://cafeine.crulrg.ulaval.ca/groups/cote/ wiki / 7642b / Names_and_projects_for_learning_of_data.html) or in your caffeine section at [http://cafeine.crulrg.ulaval.ca/labdata/oquer(http://cafeine.crulrg.ulaval.ca/labdata/(yourname)/ )
-4. Finally, when you do an experiment, or even an analysis, you must save in a folder whose name begins with the date in YYYYMMDD format then you can add whatever you want (such as: 20101029-WavelengthSwept_Test). You should avoid accents and /, if possible spaces (to avoid complicated URLs).
-5. Then you can name your files and remake folders as it is appropriate for what you are doing.
-6. Negotiable, but desirable: you should have a README.txt which indicates what the file contains.
+2. Never use spaces in names. Always use lowercase.
+3. The structure is then "the name" of the user **in lowercase letters** (for your laptops and personal computers, you can skip this step, but for laboratory computers, indicate your name). **You must use the same spelling all the time** See below for the number of projects.
+4. Next, your projects, **in lower case letters**. Again, **you must use the same spelling all the time.** There are few projects in the group. There may already be one or more projects under your username, before creating a project, you must look on [this wiki page] (http://cafeine.crulrg.ulaval.ca/groups/cote/ wiki / 7642b / Names_and_projects_for_learning_of_data.html) or in your caffeine section at [http://cafeine.crulrg.ulaval.ca/labdata/oquer(http://cafeine.crulrg.ulaval.ca/labdata/(yourname)/ )
+5. Finally, when you do an experiment, or even an analysis, you must save in a folder whose name begins with the date in YYYYMMDD format then you can add whatever you want (such as: 20101029-WavelengthSwept_Test). You should avoid accents and /, if possible spaces (to avoid complicated URLs).
+6. Then you can name your files and remake folders as it is appropriate for what you are doing.
+7. Negotiable, but desirable: you should have a README.txt which indicates what the file contains.
 
 
 Next, you need to "synchronize" your computers with caffeine. Note:
