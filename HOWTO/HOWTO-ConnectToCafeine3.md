@@ -1,12 +1,14 @@
 # How to connect to CAFEINE3/GOLATH/LABDATA
 
-## Some General Knowledge
+## General Knowledge
 
-`cafeine3` is DCCLAB's Virtual Machine running on `dccserver`, the main DCCLAB server where the data and website are. We go through `cafeine3` because it is more secure. This way, if someone messes with `cafeine3`, no problem, we can revert and the data won't be lost. `Goliath` is the name of the 100TB volume on the server. Inside `Goliath`, there's the `/labdata`
+`cafeine3` is the main server of DCCLab where the data and websites are. There is no reason for anyone to connect to dccserver, which does not contain anything useful to the group (it is a server that manages other servers). `Goliath` is the name of the very, very large disk (100TB) on the server. Inside `Goliath`, there's a folder where we keep **everything** : `/labdata`. More **important** info on labdata available [here](HOWTO-labdata.md).
 
-- To connect to `cafeine3` console, you can go via `ssh` , use this command: `ssh dcclab@cafeine3.crulrg.ulaval.ca`
+- The simplest option: You should be able to connect via Windows/macOS/Linux easily with the standard tools (Connect to, Network Neighbouhood, etc...). Look for Cafeine3 and then Goliath.  Identify as 'dcclab' with the standard password. More details below.
 
-- To connect to access the data, there are two ways (Here's the first method) :
+- To connect to the actual server `cafeine3` with a shell (i.e. a command-line window or a terminal), you must use `ssh` (meaning Secure Shell). Use this command: `ssh dcclab@cafeine3.crulrg.ulaval.ca`.  Obviously you must have `ssh` installed (standard with macOS, Windows, you're on your own).
+
+- To connect to access the data that is on the disk, there are two ways (Here's the first method) :
 
     1. You can use the `scp` command. For this, you have to know the path of the file you want to get, or the path where of where you want to put your file.
 
@@ -34,8 +36,6 @@ You can connect to the AFP service (Apple File System) **FOR MAC**
 
 ![cafeine3_4](https://raw.githubusercontent.com/DCC-Lab/Documentation/master/HOWTO/HOWTO-GitHub.assets/cafeine3_4.png)
 
-
-
 ### FOR WINDOWS 10
 
 You can connect to the SMB service (SIMBA File System) **FOR Windows**
@@ -46,3 +46,7 @@ You can connect to the SMB service (SIMBA File System) **FOR Windows**
 4. Choose a drive letter and enter the server's address: `\\cafeine3.crulrg.ulaval.ca\Public Directory\Goliath`
 5. Enter dcclab credentials (might have to create a new login account).
 6. You should now have access to Goliath as a drive on your computer.
+
+### For Commodore-64
+
+Please talk to Daniel.
