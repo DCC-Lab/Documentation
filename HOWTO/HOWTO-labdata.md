@@ -1,10 +1,10 @@
 # Labdata: DCCLab data repository
 
-Archiving data is not only useful, it is essential for a serious laboratory. In order to ensure the sustainability of the data, we must agree to a standard to save our data on our disks (lab, personal, laptop, etc ...). With a simple nomenclature, anyone can access the data easily and we can archive it systematically. The server Cafeine2 is the main repository of the data produced by the group and to avoid total clutter, here is the nomenclature to follow.
+Archiving data is not only useful, it is essential for a serious laboratory. In order to ensure the sustainability of the data, we must agree to a standard to save our data on our disks (lab, personal, laptop, etc ...). With a simple nomenclature, anyone can access the data easily and we can archive it systematically. The server Cafeine3 is the main repository of the data produced by the group and to avoid total clutter, here is the nomenclature to follow.
 
-**Note: this is not a recommendation, but a mandatory method for all group members. You must copy your data every day to labdata.**
+**Note: this is not a recommendation, but a mandatory method for all group members. You must copy your data every day to labdata. Here is a [video](https://youtu.be/GTQAXX08A-s?t=55) of someone who did not follow the procedure. **
 
-Caffeine contains everyone's archives, in a folder that reads as follows:
+Cafeine contains everyone's archives, in a folder that reads as follows:
 
 `/ labdata / username / project / YYYYMMDD * /`
 
